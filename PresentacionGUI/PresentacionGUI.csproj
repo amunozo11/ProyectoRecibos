@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEditarEscuela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarEscuela.Designer.cs">
+      <DependentUpon>FormEditarEscuela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodasEscuelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodasEscuelas.Designer.cs">
+      <DependentUpon>FormTodasEscuelas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +73,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEditarEscuela.resx">
+      <DependentUpon>FormEditarEscuela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodasEscuelas.resx">
+      <DependentUpon>FormTodasEscuelas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioMenu.resx">
       <DependentUpon>FormularioMenu.cs</DependentUpon>
     </EmbeddedResource>

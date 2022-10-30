@@ -55,13 +55,12 @@ namespace PresentacionGUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            //FormulariosFijo(new FormAgregarFamiliar());
             FormulariosFijo(new FormAgregarEscuela());
             OcultarSubMenu();
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            //mi codigo
+            FormulariosFijo(new FormTodasEscuelas());
             OcultarSubMenu();
         }
         private void button4_Click(object sender, EventArgs e)

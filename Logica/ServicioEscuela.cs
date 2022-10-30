@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datos;
 
 namespace Logica
 {
@@ -13,6 +14,7 @@ namespace Logica
     {
         readonly Datos.RepositorioEscuela RutaEscuela=new Datos.RepositorioEscuela();
         List<Escuela> ListEscuelas;
+        RepositorioEscuela repositorioEscuela = new RepositorioEscuela();
         public ServicioEscuela()
         {
             ListEscuelas=RutaEscuela.Leer();
@@ -38,6 +40,12 @@ namespace Logica
         {
             return ListEscuelas;
         }
+
+        public List<Escuela> GrillaCarga()
+        {
+            return repositorioEscuela.Leer();
+        }
+
         public string Eliminar(Escuela escuela)
         {
             ListEscuelas.Remove(escuela);
