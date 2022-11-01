@@ -16,19 +16,27 @@ namespace PresentacionGUI
     {
         ServicioEscuela servicioEscuela = new ServicioEscuela();
         FormEditarEscuela formEditarEscuela = new FormEditarEscuela();
-        
+        ServicioEscuela milogica=new ServicioEscuela();
         public FormTodasEscuelas()
         {
             InitializeComponent();
             CargarGrilla();
         }
-
+        
         void CargarGrilla()
         {
-            foreach(var item in servicioEscuela.GrillaCarga())
+            if (servicioEscuela.Mostrar()==null)
             {
-                GrillaEscuela.Rows.Add(item.NiT, item.NombreEscuela, item.Direccion, item.Telefono, item.Correo);
+                MessageBox.Show("NO HAY ESCUELAS REGISTRADA","ALERTA",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+            else
+            {
+                foreach (var item in servicioEscuela.GrillaCarga())
+                {
+                    GrillaEscuela.Rows.Add(item.NiT, item.NombreEscuela, item.Direccion, item.Telefono, item.Correo);
+                }
+            }
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
