@@ -34,7 +34,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnAgregarEstudiantes = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.panelEscuelaSubMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -89,7 +89,7 @@
             this.panelAlumnoSubMenu.Controls.Add(this.button6);
             this.panelAlumnoSubMenu.Controls.Add(this.button7);
             this.panelAlumnoSubMenu.Controls.Add(this.button8);
-            this.panelAlumnoSubMenu.Controls.Add(this.button9);
+            this.panelAlumnoSubMenu.Controls.Add(this.btnAgregarEstudiantes);
             this.panelAlumnoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAlumnoSubMenu.Location = new System.Drawing.Point(0, 312);
             this.panelAlumnoSubMenu.Name = "panelAlumnoSubMenu";
@@ -144,21 +144,21 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // btnAgregarEstudiantes
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(250, 40);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "button9";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnAgregarEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarEstudiantes.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEstudiantes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregarEstudiantes.Location = new System.Drawing.Point(0, 0);
+            this.btnAgregarEstudiantes.Name = "btnAgregarEstudiantes";
+            this.btnAgregarEstudiantes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAgregarEstudiantes.Size = new System.Drawing.Size(250, 40);
+            this.btnAgregarEstudiantes.TabIndex = 0;
+            this.btnAgregarEstudiantes.Text = "Agregar Estudiantes";
+            this.btnAgregarEstudiantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarEstudiantes.UseVisualStyleBackColor = true;
+            this.btnAgregarEstudiantes.Click += new System.EventHandler(this.button9_Click);
             // 
             // btnAlumnos
             // 
@@ -308,7 +308,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnAgregarEstudiantes;
         private System.Windows.Forms.Button btnAlumnos;
         private System.Windows.Forms.Panel panelEscuelaSubMenu;
         private System.Windows.Forms.Button button4;

@@ -57,7 +57,7 @@ namespace Logica
         {
             var Nit = Buscar(escuela.NiT);
             ListEscuelas.Remove(Nit);
-            //ListEscuelas.Remove(escuela);
+            
             var estado= RutaEscuela.Eliminar(ListEscuelas);
             Refresh();
             return estado? $"ESCUELA ELIMINADA: {escuela.NombreEscuela}" :$"ERROR AL ELIMINAR LA ESCUELA: {escuela.NombreEscuela}";

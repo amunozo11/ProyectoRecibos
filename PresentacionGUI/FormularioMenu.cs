@@ -84,7 +84,7 @@ namespace PresentacionGUI
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //mi codigo
+            FormulariosFijo(new FormAgregarEstudiante());
             OcultarSubMenu();
         }
 

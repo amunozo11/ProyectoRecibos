@@ -18,7 +18,6 @@ namespace PresentacionGUI
         public FormAgregarEscuela()
         {
             InitializeComponent();
-            //IdCreciente();
             txtTelefono.MaxLength = 10;
         }
 
