@@ -12,5 +12,6 @@ namespace Entidades
         public string Apellidos { get; set; }
         public char Sexo { get; set; }
         public int Id { get; set; }
+        
     }
 }

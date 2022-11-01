@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Datos;
 namespace Logica
 {
     public class ServicioEstudiante
     {
         List<Estudiante> ListaEstudiantes ;
         readonly Datos.RepositorioEstudiantes RutaEstudiantes = new Datos.RepositorioEstudiantes();
+        RepositorioEstudiantes repositorioEstudiantes = new RepositorioEstudiantes();
         public ServicioEstudiante()
         {
             ListaEstudiantes = RutaEstudiantes.Leer();
@@ -35,7 +36,7 @@ namespace Logica
         public List<Estudiante> Mostrar()
         {
             /*ListaEstudiantes = RutaEstudiantes.Leer();*/
-            return ListaEstudiantes;
+            return repositorioEstudiantes.Leer();
         }
         public string Eliminar(Estudiante estudiante)
         {

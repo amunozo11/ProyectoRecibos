@@ -6,6 +6,7 @@ namespace Datos
 {
     public class RepositorioEstudiantes: Archivos
     {
+
         public RepositorioEstudiantes()
         {
             ruta = "Estudiantes.txt";
@@ -60,6 +61,7 @@ namespace Datos
                 Grado = linea.Trim().Split(';')[5],
                 PeriodoEstudio = linea.Trim().Split(';')[6],
                 PromPonderado = double.Parse(linea.Trim().Split(';')[7])
+                //EscuelaRegistrada = linea.Trim().Split(';')[8])
             };
             return estudiante;
         }

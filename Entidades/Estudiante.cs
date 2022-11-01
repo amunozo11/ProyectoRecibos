@@ -13,6 +13,7 @@ namespace Entidades
         public string Grado { get; set; }
         public string PeriodoEstudio { get; set; }
         public double PromPonderado { get; set; }
+        public string EscuelaRegistrada { get; set; }
         public bool Estado()
         {
             return false;
@@ -20,7 +21,7 @@ namespace Entidades
         public override string ToString()
         {
             return $"{Nombres};{Apellidos};{Sexo};{Id}" +
-                $";{curso};{Grado};{PeriodoEstudio};{PromPonderado}";
+                $";{curso};{Grado};{PeriodoEstudio};{PromPonderado};{EscuelaRegistrada}";
         }
     }
 }
