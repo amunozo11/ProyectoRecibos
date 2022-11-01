@@ -37,7 +37,6 @@ namespace Datos
                 StreamReader sr = new StreamReader(ruta);
                 while (!sr.EndOfStream)
                 {
-
                     listaEstudent.Add(Mapear(sr.ReadLine()));
                 }
                 sr.Close();
@@ -46,8 +45,9 @@ namespace Datos
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return null;
+                
             }
+            return null;
         }
         public Estudiante Mapear(string linea)
         {
@@ -60,8 +60,8 @@ namespace Datos
                 curso = linea.Trim().Split(';')[4],
                 Grado = linea.Trim().Split(';')[5],
                 PeriodoEstudio = linea.Trim().Split(';')[6],
-                PromPonderado = double.Parse(linea.Trim().Split(';')[7])
-                //EscuelaRegistrada = linea.Trim().Split(';')[8])
+                PromPonderado = double.Parse(linea.Trim().Split(';')[7]),
+                EscuelaRegistrada = linea.Trim().Split(';')[8],
             };
             return estudiante;
         }

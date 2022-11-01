@@ -65,6 +65,12 @@
     <Compile Include="FormTodasEscuelas.Designer.cs">
       <DependentUpon>FormTodasEscuelas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTodosEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodosEstudiantes.Designer.cs">
+      <DependentUpon>FormTodosEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodasEscuelas.resx">
       <DependentUpon>FormTodasEscuelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodosEstudiantes.resx">
+      <DependentUpon>FormTodosEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioMenu.resx">
       <DependentUpon>FormularioMenu.cs</DependentUpon>

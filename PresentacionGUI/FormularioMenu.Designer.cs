@@ -33,7 +33,7 @@
             this.panelAlumnoSubMenu = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnTodosEstudiantes = new System.Windows.Forms.Button();
             this.btnAgregarEstudiantes = new System.Windows.Forms.Button();
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.panelEscuelaSubMenu = new System.Windows.Forms.Panel();
@@ -88,7 +88,7 @@
             this.panelAlumnoSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelAlumnoSubMenu.Controls.Add(this.button6);
             this.panelAlumnoSubMenu.Controls.Add(this.button7);
-            this.panelAlumnoSubMenu.Controls.Add(this.button8);
+            this.panelAlumnoSubMenu.Controls.Add(this.btnTodosEstudiantes);
             this.panelAlumnoSubMenu.Controls.Add(this.btnAgregarEstudiantes);
             this.panelAlumnoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAlumnoSubMenu.Location = new System.Drawing.Point(0, 312);
@@ -128,21 +128,21 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btnTodosEstudiantes
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(0, 40);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(250, 40);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "button8";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnTodosEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTodosEstudiantes.FlatAppearance.BorderSize = 0;
+            this.btnTodosEstudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodosEstudiantes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTodosEstudiantes.Location = new System.Drawing.Point(0, 40);
+            this.btnTodosEstudiantes.Name = "btnTodosEstudiantes";
+            this.btnTodosEstudiantes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnTodosEstudiantes.Size = new System.Drawing.Size(250, 40);
+            this.btnTodosEstudiantes.TabIndex = 1;
+            this.btnTodosEstudiantes.Text = "Estudiantes registrados";
+            this.btnTodosEstudiantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTodosEstudiantes.UseVisualStyleBackColor = true;
+            this.btnTodosEstudiantes.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnAgregarEstudiantes
             // 
@@ -307,7 +307,7 @@
         private System.Windows.Forms.Panel panelAlumnoSubMenu;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnTodosEstudiantes;
         private System.Windows.Forms.Button btnAgregarEstudiantes;
         private System.Windows.Forms.Button btnAlumnos;
         private System.Windows.Forms.Panel panelEscuelaSubMenu;
