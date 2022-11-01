@@ -51,6 +51,7 @@ namespace PresentacionGUI
         private void FormEditarEscuela_Load(object sender, EventArgs e)
         {
             Nit = txtNit.Text;
+            txtNit.Enabled = false;
         }
 
         private void txtNit_KeyPress(object sender, KeyPressEventArgs e)

@@ -41,6 +41,13 @@ namespace Logica
             return ListEscuelas;
         }
 
+
+        public void Refresh()
+        {
+
+            ListEscuelas = repositorioEscuela.Leer();
+        }
+
         public List<Escuela> GrillaCarga()
         {
             return repositorioEscuela.Leer();
@@ -48,9 +55,11 @@ namespace Logica
 
         public string Eliminar(Escuela escuela)
         {
-            ListEscuelas.Remove(escuela);
+            var Nit = Buscar(escuela.NiT);
+            ListEscuelas.Remove(Nit);
+            //ListEscuelas.Remove(escuela);
             var estado= RutaEscuela.Eliminar(ListEscuelas);
-            ActualizarList();
+            Refresh();
             return estado? $"ESCUELA ELIMINADA: {escuela.NombreEscuela}" :$"ERROR AL ELIMINAR LA ESCUELA: {escuela.NombreEscuela}";
         }
         public string Actualizar(Escuela Escuela,Escuela EscuelaActualizada)

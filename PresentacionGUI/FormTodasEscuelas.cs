@@ -74,8 +74,8 @@ namespace PresentacionGUI
 
         void Eliminar(Escuela escuela)
         {
-            var nit = servicioEscuela.Buscar(escuela.NiT);
-            var mensaje = servicioEscuela.Eliminar(nit);
+            //var nit = servicioEscuela.Buscar(escuela.NiT);
+            var mensaje = servicioEscuela.Eliminar(escuela);
             MessageBox.Show(mensaje);
         }
 
