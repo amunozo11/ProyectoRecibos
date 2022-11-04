@@ -40,7 +40,8 @@ namespace Logica
         }
         public string Eliminar(Estudiante estudiante)
         {
-            ListaEstudiantes.Remove(estudiante);
+            var Id = Buscar(estudiante.Id);
+            ListaEstudiantes.Remove(Id);
             var estado = RutaEstudiantes.Eliminar(ListaEstudiantes);
             ActualizarLit();
             return estado ?"ESTUDIANTE ELIMINADO":"ERROR AL ELIMINAR EL ETUDIANTE";
@@ -57,6 +58,13 @@ namespace Logica
                 }
             }
             return null;
+        }
+        public string Actualizar(Estudiante estudiante, Estudiante estudianteActualizado)
+        {
+            Eliminar(estudiante);
+            Guardar(estudianteActualizado);
+            ActualizarLit();
+            return "ESTUDIANTE ACTUALIZADO";
         }
         public  string RetirarEstudiante()
         {

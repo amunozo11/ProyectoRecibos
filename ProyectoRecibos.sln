@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{2E20269C-4676-4A26-95A3-1273C41182BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{B658A518-11AB-435B-8346-7BBFE189A270}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{2925C5D0-A774-4470-BF65-E3611353D9DB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba", "Prueba\Prueba.csproj", "{DE887EBE-6AF7-49F2-8C65-1185422CE243}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionGUI", "PresentacionGUI\PresentacionGUI.csproj", "{F840FEFA-2D69-4CEF-A58B-68270F990C29}"
 EndProject
@@ -31,10 +29,6 @@ Global
 		{2925C5D0-A774-4470-BF65-E3611353D9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2925C5D0-A774-4470-BF65-E3611353D9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2925C5D0-A774-4470-BF65-E3611353D9DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE887EBE-6AF7-49F2-8C65-1185422CE243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE887EBE-6AF7-49F2-8C65-1185422CE243}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE887EBE-6AF7-49F2-8C65-1185422CE243}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE887EBE-6AF7-49F2-8C65-1185422CE243}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F840FEFA-2D69-4CEF-A58B-68270F990C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F840FEFA-2D69-4CEF-A58B-68270F990C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F840FEFA-2D69-4CEF-A58B-68270F990C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
