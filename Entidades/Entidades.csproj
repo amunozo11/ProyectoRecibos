@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Escuela.cs" />
     <Compile Include="Estudiante.cs" />
-    <Compile Include="GenerarRecibo.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recibo.cs" />

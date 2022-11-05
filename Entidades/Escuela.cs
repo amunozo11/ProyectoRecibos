@@ -25,5 +25,10 @@ namespace Entidades
         {
             return $"{NombreEscuela};{Direccion};{NiT};{Telefono};{Correo}";
         }
+
+        public static implicit operator Escuela(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

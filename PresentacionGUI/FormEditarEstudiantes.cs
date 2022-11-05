@@ -55,7 +55,6 @@ namespace PresentacionGUI
             }
             estudiante.Grado = txtCurso.Text;
             estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
-            estudiante.PromPonderado = float.Parse(txtPromedio.Text);
             estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
 
             var mensaje = servicioEstudiante.Actualizar(estudianteOld, estudiante);

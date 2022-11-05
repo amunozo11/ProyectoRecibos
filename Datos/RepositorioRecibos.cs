@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.IO;
 namespace Datos
 {
-    public class RepositorioRecibos:Archivos
+    public class RepositorioRecibos:Archivos,ICrudDatos<Recibo>
     {
         bool Estado;
         public RepositorioRecibos()
         {
             ruta = "Recibos.txt";
         }
+
+
         public bool Guardar(Recibo recibo)
         {
             try
@@ -27,6 +29,7 @@ namespace Datos
             }
             return Estado;
         }
+
 
         public List<Recibo> Leer()
         {
@@ -48,6 +51,7 @@ namespace Datos
             }
             return null;
         }
+
         public Recibo Mapear(string Linea)
         {
             var recibo = new Recibo
@@ -65,6 +69,7 @@ namespace Datos
 
             return recibo;
         }
+
         public bool Eliminar(List<Recibo> listaRecibos)
         {
             bool estado;
@@ -86,5 +91,6 @@ namespace Datos
             }
             return estado;
         }
+
     }
 }

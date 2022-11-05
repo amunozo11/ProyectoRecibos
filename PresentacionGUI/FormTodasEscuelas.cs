@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 using Entidades;
-
 namespace PresentacionGUI
 {
     public partial class FormTodasEscuelas : Form
@@ -31,12 +30,11 @@ namespace PresentacionGUI
             }
             else
             {
-                foreach (var item in servicioEscuela.GrillaCarga())
+                foreach (var item in servicioEscuela.Mostrar())
                 {
                     GrillaEscuela.Rows.Add(item.NiT, item.NombreEscuela, item.Direccion, item.Telefono, item.Correo);
                 }
             }
-            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
