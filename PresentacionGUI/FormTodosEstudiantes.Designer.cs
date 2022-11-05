@@ -166,48 +166,56 @@
             // 
             // Column1
             // 
+            this.Column1.FillWeight = 96.8818F;
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 96.8818F;
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
+            this.Column3.FillWeight = 96.8818F;
             this.Column3.HeaderText = "Apellido";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.FillWeight = 96.8818F;
             this.Column4.HeaderText = "Sexo";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column6
             // 
+            this.Column6.FillWeight = 96.8818F;
             this.Column6.HeaderText = "Curso";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Grado
             // 
+            this.Grado.FillWeight = 96.8818F;
             this.Grado.HeaderText = "Grado";
             this.Grado.Name = "Grado";
             this.Grado.ReadOnly = true;
             // 
             // Column7
             // 
+            this.Column7.FillWeight = 96.8818F;
             this.Column7.HeaderText = "Periodo";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Column9
             // 
+            this.Column9.FillWeight = 121.8274F;
             this.Column9.HeaderText = "Escuela";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;

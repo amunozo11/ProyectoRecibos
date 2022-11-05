@@ -57,14 +57,13 @@ namespace Datos
             var recibo = new Recibo
             {
                 Concepto = Linea.Trim().Split(';')[0],
-                Descripcion = Linea.Trim().Split(';')[1],
-                Cantidad = double.Parse(Linea.Trim().Split(';')[2]),
-                CodigoReferencia = Linea.Trim().Split(';')[3],
-                FechaLimite = DateTime.Parse(Linea.Trim().Split(';')[4]),
-                FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[5]),
-                FormaPago = Linea.Trim().Split(';')[6],
-                EstadoPago = bool.Parse(Linea.Trim().Split(';')[7]),
-                Observaciones = Linea.Trim().Split(';')[8]
+                Cantidad = double.Parse(Linea.Trim().Split(';')[1]),
+                CodigoReferencia = Linea.Trim().Split(';')[2],
+                FechaLimite = DateTime.Parse(Linea.Trim().Split(';')[3]),
+                FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[4]),
+                Banco = Linea.Trim().Split(';')[5],
+                EstadoPago = bool.Parse(Linea.Trim().Split(';')[6]),
+                Observaciones = Linea.Trim().Split(';')[7]
             };
 
             return recibo;

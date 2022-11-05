@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosRecibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosRecibos.Designer.cs">
+      <DependentUpon>DatosRecibos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="Recibo.Designer.cs">
       <DependentUpon>Recibo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatosRecibos.resx">
+      <DependentUpon>DatosRecibos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarEstudiante.resx">
       <DependentUpon>FormAgregarEstudiante.cs</DependentUpon>
     </EmbeddedResource>
