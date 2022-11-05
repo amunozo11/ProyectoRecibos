@@ -43,7 +43,6 @@ namespace PresentacionGUI
         private void FormAgregarEstudiante_Load(object sender, EventArgs e)
         {
             formAgregar.OcultarAgregar();
-            
         }
 
 
@@ -75,6 +74,7 @@ namespace PresentacionGUI
                         estudiante.Sexo = 'F';
                     }
                     estudiante.curso = txtCurso.Text;
+                    estudiante.Grado = txtGrado.Text;
                     estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
                     estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
                     var mensaje = servicioEstudiante.Guardar(estudiante);

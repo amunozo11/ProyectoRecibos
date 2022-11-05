@@ -51,6 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtGrado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelFondo.SuspendLayout();
             this.panelEstudiantes.SuspendLayout();
             this.panelBtn.SuspendLayout();
@@ -71,6 +73,8 @@
             // panelEstudiantes
             // 
             this.panelEstudiantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelEstudiantes.Controls.Add(this.txtGrado);
+            this.panelEstudiantes.Controls.Add(this.label8);
             this.panelEstudiantes.Controls.Add(this.panelBtn);
             this.panelEstudiantes.Controls.Add(this.label7);
             this.panelEstudiantes.Controls.Add(this.pictureBox1);
@@ -153,7 +157,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(52, 279);
+            this.label7.Location = new System.Drawing.Point(52, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 32;
@@ -176,7 +180,7 @@
             this.cbEscuela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEscuela.ForeColor = System.Drawing.Color.Black;
             this.cbEscuela.FormattingEnabled = true;
-            this.cbEscuela.Location = new System.Drawing.Point(112, 279);
+            this.cbEscuela.Location = new System.Drawing.Point(112, 316);
             this.cbEscuela.Name = "cbEscuela";
             this.cbEscuela.Size = new System.Drawing.Size(88, 21);
             this.cbEscuela.TabIndex = 31;
@@ -193,7 +197,7 @@
             "2",
             "3",
             "4"});
-            this.cbPeriodo.Location = new System.Drawing.Point(112, 236);
+            this.cbPeriodo.Location = new System.Drawing.Point(112, 273);
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(88, 21);
             this.cbPeriodo.TabIndex = 30;
@@ -202,7 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(52, 236);
+            this.label6.Location = new System.Drawing.Point(52, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 29;
@@ -322,6 +326,26 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "ID";
             // 
+            // txtGrado
+            // 
+            this.txtGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.txtGrado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrado.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtGrado.Location = new System.Drawing.Point(112, 235);
+            this.txtGrado.Name = "txtGrado";
+            this.txtGrado.Size = new System.Drawing.Size(88, 13);
+            this.txtGrado.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(52, 238);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Curso";
+            // 
             // FormAgregarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,5 +388,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button BtnLimpiar;
+        public System.Windows.Forms.TextBox txtGrado;
+        private System.Windows.Forms.Label label8;
     }
 }

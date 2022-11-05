@@ -44,6 +44,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaEstudiantes)).BeginInit();
@@ -101,6 +102,7 @@
             this.Column3,
             this.Column4,
             this.Column6,
+            this.Grado,
             this.Column7,
             this.Column9});
             this.GrillaEstudiantes.ContextMenuStrip = this.contextMenuStrip1;
@@ -188,9 +190,15 @@
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Grado";
+            this.Column6.HeaderText = "Curso";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // Grado
+            // 
+            this.Grado.HeaderText = "Grado";
+            this.Grado.Name = "Grado";
+            this.Grado.ReadOnly = true;
             // 
             // Column7
             // 
@@ -235,6 +243,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
