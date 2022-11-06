@@ -29,30 +29,36 @@
         private void InitializeComponent()
         {
             this.panelRecibo = new System.Windows.Forms.Panel();
+            this.txtObservacion = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DateExtra = new System.Windows.Forms.DateTimePicker();
+            this.DateLimete = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CbBanco = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CbConcepto = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelBtn = new System.Windows.Forms.Panel();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtReferencia = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CbConcepto = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.CbBanco = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.DateLimete = new System.Windows.Forms.DateTimePicker();
-            this.DateExtra = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtObservacion = new System.Windows.Forms.RichTextBox();
+            this.GrillaSelect = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Identificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelRecibo.SuspendLayout();
             this.panelBtn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRecibo
             // 
+            this.panelRecibo.Controls.Add(this.GrillaSelect);
             this.panelRecibo.Controls.Add(this.txtObservacion);
             this.panelRecibo.Controls.Add(this.label7);
             this.panelRecibo.Controls.Add(this.DateExtra);
@@ -73,6 +79,147 @@
             this.panelRecibo.Name = "panelRecibo";
             this.panelRecibo.Size = new System.Drawing.Size(668, 400);
             this.panelRecibo.TabIndex = 0;
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(171, 275);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(201, 56);
+            this.txtObservacion.TabIndex = 50;
+            this.txtObservacion.Text = "";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(47, 275);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Observaciones";
+            // 
+            // DateExtra
+            // 
+            this.DateExtra.Location = new System.Drawing.Point(171, 236);
+            this.DateExtra.Name = "DateExtra";
+            this.DateExtra.Size = new System.Drawing.Size(200, 20);
+            this.DateExtra.TabIndex = 48;
+            // 
+            // DateLimete
+            // 
+            this.DateLimete.Location = new System.Drawing.Point(171, 206);
+            this.DateLimete.Name = "DateLimete";
+            this.DateLimete.Size = new System.Drawing.Size(200, 20);
+            this.DateLimete.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(47, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 13);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Fecha Extraordinaria";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(47, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Fecha Limete";
+            // 
+            // CbBanco
+            // 
+            this.CbBanco.BackColor = System.Drawing.Color.White;
+            this.CbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CbBanco.ForeColor = System.Drawing.Color.Black;
+            this.CbBanco.FormattingEnabled = true;
+            this.CbBanco.Items.AddRange(new object[] {
+            "Bancolombia",
+            "Banco Bogota"});
+            this.CbBanco.Location = new System.Drawing.Point(171, 168);
+            this.CbBanco.Name = "CbBanco";
+            this.CbBanco.Size = new System.Drawing.Size(88, 21);
+            this.CbBanco.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(47, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Banco";
+            // 
+            // txtValor
+            // 
+            this.txtValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtValor.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtValor.Location = new System.Drawing.Point(171, 138);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(201, 13);
+            this.txtValor.TabIndex = 42;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(47, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Valor";
+            // 
+            // CbConcepto
+            // 
+            this.CbConcepto.BackColor = System.Drawing.Color.White;
+            this.CbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CbConcepto.ForeColor = System.Drawing.Color.Black;
+            this.CbConcepto.FormattingEnabled = true;
+            this.CbConcepto.Items.AddRange(new object[] {
+            "Matricula"});
+            this.CbConcepto.Location = new System.Drawing.Point(171, 90);
+            this.CbConcepto.Name = "CbConcepto";
+            this.CbConcepto.Size = new System.Drawing.Size(88, 21);
+            this.CbConcepto.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(47, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Concepto";
+            // 
+            // txtReferencia
+            // 
+            this.txtReferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.txtReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReferencia.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtReferencia.Location = new System.Drawing.Point(171, 55);
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(201, 13);
+            this.txtReferencia.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(47, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Referencia";
             // 
             // panelBtn
             // 
@@ -98,6 +245,7 @@
             this.BtnLimpiar.TabIndex = 37;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // btnCancelar
             // 
@@ -112,6 +260,7 @@
             this.btnCancelar.TabIndex = 36;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -125,152 +274,43 @@
             this.btnAgregar.TabIndex = 35;
             this.btnAgregar.Text = "Guardar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtReferencia
+            // GrillaSelect
             // 
-            this.txtReferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.txtReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtReferencia.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtReferencia.Location = new System.Drawing.Point(171, 55);
-            this.txtReferencia.Name = "txtReferencia";
-            this.txtReferencia.Size = new System.Drawing.Size(201, 13);
-            this.txtReferencia.TabIndex = 38;
+            this.GrillaSelect.AllowUserToAddRows = false;
+            this.GrillaSelect.AllowUserToDeleteRows = false;
+            this.GrillaSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaSelect.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Identificacion,
+            this.Grado});
+            this.GrillaSelect.Location = new System.Drawing.Point(401, 55);
+            this.GrillaSelect.Name = "GrillaSelect";
+            this.GrillaSelect.ReadOnly = true;
+            this.GrillaSelect.RowHeadersWidth = 10;
+            this.GrillaSelect.Size = new System.Drawing.Size(180, 276);
+            this.GrillaSelect.TabIndex = 51;
             // 
-            // label1
+            // Nombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(47, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Referencia";
+            this.Nombre.HeaderText = "Identificacion";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
-            // label2
+            // Identificacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(47, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Concepto";
+            this.Identificacion.HeaderText = "Escuela";
+            this.Identificacion.Name = "Identificacion";
+            this.Identificacion.ReadOnly = true;
+            this.Identificacion.Width = 80;
             // 
-            // CbConcepto
+            // Grado
             // 
-            this.CbConcepto.BackColor = System.Drawing.Color.White;
-            this.CbConcepto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CbConcepto.ForeColor = System.Drawing.Color.Black;
-            this.CbConcepto.FormattingEnabled = true;
-            this.CbConcepto.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.CbConcepto.Location = new System.Drawing.Point(171, 90);
-            this.CbConcepto.Name = "CbConcepto";
-            this.CbConcepto.Size = new System.Drawing.Size(88, 21);
-            this.CbConcepto.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(47, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            this.txtValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValor.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtValor.Location = new System.Drawing.Point(171, 138);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(201, 13);
-            this.txtValor.TabIndex = 42;
-            // 
-            // CbBanco
-            // 
-            this.CbBanco.BackColor = System.Drawing.Color.White;
-            this.CbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CbBanco.ForeColor = System.Drawing.Color.Black;
-            this.CbBanco.FormattingEnabled = true;
-            this.CbBanco.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.CbBanco.Location = new System.Drawing.Point(171, 168);
-            this.CbBanco.Name = "CbBanco";
-            this.CbBanco.Size = new System.Drawing.Size(88, 21);
-            this.CbBanco.TabIndex = 44;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(47, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Banco";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(47, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Fecha Limete";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(47, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 13);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Fecha Extraordinaria";
-            // 
-            // DateLimete
-            // 
-            this.DateLimete.Location = new System.Drawing.Point(171, 206);
-            this.DateLimete.Name = "DateLimete";
-            this.DateLimete.Size = new System.Drawing.Size(200, 20);
-            this.DateLimete.TabIndex = 47;
-            // 
-            // DateExtra
-            // 
-            this.DateExtra.Location = new System.Drawing.Point(171, 236);
-            this.DateExtra.Name = "DateExtra";
-            this.DateExtra.Size = new System.Drawing.Size(200, 20);
-            this.DateExtra.TabIndex = 48;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(47, 275);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Observaciones";
-            // 
-            // txtObservacion
-            // 
-            this.txtObservacion.Location = new System.Drawing.Point(171, 275);
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(201, 56);
-            this.txtObservacion.TabIndex = 50;
-            this.txtObservacion.Text = "";
+            this.Grado.HeaderText = "Grado";
+            this.Grado.Name = "Grado";
+            this.Grado.ReadOnly = true;
+            this.Grado.Width = 70;
             // 
             // DatosRecibos
             // 
@@ -284,6 +324,7 @@
             this.panelRecibo.ResumeLayout(false);
             this.panelRecibo.PerformLayout();
             this.panelBtn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaSelect)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +350,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView GrillaSelect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
     }
 }
