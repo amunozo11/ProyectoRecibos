@@ -13,8 +13,6 @@ namespace PresentacionGUI
 {
     public partial class FormEditarEstudiantes : Form
     {
-
-        FormAgregarEstudiante formAgregar = new FormAgregarEstudiante();
         ServicioEscuela servicioEscuela = new ServicioEscuela();
         ServicioEstudiante servicioEstudiante = new ServicioEstudiante();
         public FormEditarEstudiantes()
@@ -29,7 +27,6 @@ namespace PresentacionGUI
             {
                 cbEscuela.Items.Add(item.NombreEscuela);
             }
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
