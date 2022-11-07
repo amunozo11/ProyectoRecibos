@@ -7,37 +7,61 @@ using System.Threading.Tasks;
 using Datos;
 namespace Logica
 {
-    public class ServicioEstudiante
+    public class ServicioEstudiante:ICrud<Estudiante>
     {
         List<Estudiante> ListaEstudiantes ;
         readonly Datos.RepositorioEstudiantes RutaEstudiantes = new Datos.RepositorioEstudiantes();
-        RepositorioEstudiantes repositorioEstudiantes = new RepositorioEstudiantes();
+        readonly RepositorioEstudiantes repositorioEstudiantes = new RepositorioEstudiantes();
         public ServicioEstudiante()
         {
             ListaEstudiantes = RutaEstudiantes.Leer();
         }
+
+
         public void ActualizarLit()
         {
             ListaEstudiantes = RutaEstudiantes.Leer();
         }
+
+
+        public List<Estudiante> Mostrar()
+        {
+            return repositorioEstudiantes.Leer();
+        }
+
+
         public string Guardar(Estudiante estudiante)
         {
             try
             {
+                foreach (var item in ListaEstudiantes)
+                {
+                    if (estudiante.Id.Equals(item.Id))
+                    {
+
+                        return $"YA EXISTE UN ESTUDIANTE CON ID: {estudiante.Id}";
+                    }
+                }
                 var estado = RutaEstudiantes.Guardar(estudiante);
                 return estado ? $"ESTUDIANTE GUARDADO CON NOMBRE: {estudiante.Nombres}" :
-                $"ERROR AL GUARDAR EL ESTDIANTE :{estudiante.Nombres}";
+                $"ERROR AL GUARDAR EL ESTDIANTE :{estudiante.Nombres.ToUpper()}";
             }
             catch (Exception e)
             {
                 return e.Message;
             }
         }
-        public List<Estudiante> Mostrar()
+
+
+        public string Actualizar(Estudiante estudiante, Estudiante estudianteActualizado)
         {
-            /*ListaEstudiantes = RutaEstudiantes.Leer();*/
-            return repositorioEstudiantes.Leer();
+            Eliminar(estudiante);
+            Guardar(estudianteActualizado);
+            ActualizarLit();
+            return "ESTUDIANTE ACTUALIZADO";
         }
+
+
         public string Eliminar(Estudiante estudiante)
         {
             var Id = Buscar(estudiante.Id);
@@ -46,6 +70,8 @@ namespace Logica
             ActualizarLit();
             return estado ?"ESTUDIANTE ELIMINADO":"ERROR AL ELIMINAR EL ETUDIANTE";
         }
+
+
         public Estudiante Buscar(int id)
         {
             _ = new Estudiante();
@@ -59,23 +85,6 @@ namespace Logica
             }
             return null;
         }
-        public string Actualizar(Estudiante estudiante, Estudiante estudianteActualizado)
-        {
-            Eliminar(estudiante);
-            Guardar(estudianteActualizado);
-            ActualizarLit();
-            return "ESTUDIANTE ACTUALIZADO";
-        }
-        public  string RetirarEstudiante()
-        {
-            //codigo retirar
-            return "";
-        }
-        public bool EstadoEstudiante()
-        {
-            //aqui codigo para verificar estado activo o  inactivo estudiante
-            bool estadoEstudiante=true;
-            return estadoEstudiante;
-        }
+        
     }
 }

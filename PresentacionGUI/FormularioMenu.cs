@@ -22,6 +22,7 @@ namespace PresentacionGUI
         {
             panelEscuelaSubMenu.Visible = false;
             panelAlumnoSubMenu.Visible = false;
+            panelMenuRecibo.Visible = false;
 
         }
 
@@ -31,6 +32,10 @@ namespace PresentacionGUI
                 panelEscuelaSubMenu.Visible = false;
             if (panelAlumnoSubMenu.Visible == true)
                 panelAlumnoSubMenu.Visible = false;
+            if (panelMenuRecibo.Visible==true)
+            {
+                panelMenuRecibo.Visible=false;
+            }
         }
 
         private void MostrarSubMenu(Panel subMenu)
@@ -111,7 +116,7 @@ namespace PresentacionGUI
         private void btnRecibo_Click(object sender, EventArgs e)
         {
             //mi codigo
-            OcultarSubMenu();
+            MostrarSubMenu(panelMenuRecibo);
         }
         #endregion
 
@@ -131,6 +136,10 @@ namespace PresentacionGUI
             formHijo.Show();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormulariosFijo(new DatosRecibos());
+            OcultarSubMenu();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class ServicioRecibo
+    public class ServicioRecibo: ICrud<Recibo>
     {
         List<Recibo> ListaRecibos;
         readonly Datos.RepositorioRecibos RutaRecibos = new Datos.RepositorioRecibos();
@@ -15,10 +15,14 @@ namespace Logica
         {
             ListaRecibos = RutaRecibos.Leer();
         }
+
+
         public void ActualizarLit()
         {
             ListaRecibos = RutaRecibos.Leer();
         }
+
+
         public string Guardar(Recibo estudiante)
         {
             try
@@ -32,10 +36,14 @@ namespace Logica
                 return e.Message;
             }
         }
+
+
         public List<Recibo> Mostrar()
         {
             return ListaRecibos;
         }
+
+
         public string Eliminar(Recibo recibo)
         {
             ListaRecibos.Remove(recibo);
@@ -43,6 +51,8 @@ namespace Logica
             ActualizarLit();
             return estado ? "INFORMACION DE RECIBO ELIMINADA" : "ERROR AL ELIMINAR LA INFORMACION DEL RECIBO";
         }
+
+
         public Recibo Buscar(string Referencia)
         {
             _ = new Recibo();
@@ -56,13 +66,7 @@ namespace Logica
             }
             return null;
         }
-        public bool EstadoDeuda()
-        {
-            //aqui agregar odigo para validar si el recibo fue pagado
-            // 
-            bool estadoDeuda=true;
-            return estadoDeuda;
-        }
+
         public bool GenerarRecibo()
         {
             /* aqui agregar codigo para generar recibo: si el estado del estudiante es inactivo
@@ -70,5 +74,12 @@ namespace Logica
             bool estadoReibo=false;
             return estadoReibo;
         }
+
+
+        public string Actualizar(Recibo tipo, Recibo tipoDos)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

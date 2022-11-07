@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 namespace Datos
 {
-    public class RepositorioEstudiantes: Archivos
+    public class RepositorioEstudiantes: Archivos,ICrudDatos<Estudiante>
     {
 
         public RepositorioEstudiantes()
@@ -12,6 +12,7 @@ namespace Datos
             ruta = "Estudiantes.txt";
 
         }
+
         public bool Guardar(Estudiante estudiante)
         {
             try
@@ -29,6 +30,7 @@ namespace Datos
                 return true;
             }
         }
+
         public List<Estudiante> Leer()
         {
             try
@@ -49,6 +51,8 @@ namespace Datos
             }
             return null;
         }
+
+
         public Estudiante Mapear(string linea)
         {
             var estudiante = new Estudiante
@@ -60,11 +64,12 @@ namespace Datos
                 curso = linea.Trim().Split(';')[4],
                 Grado = linea.Trim().Split(';')[5],
                 PeriodoEstudio = linea.Trim().Split(';')[6],
-                PromPonderado = double.Parse(linea.Trim().Split(';')[7]),
-                EscuelaRegistrada = linea.Trim().Split(';')[8],
+                EscuelaRegistrada = linea.Trim().Split(';')[7],
             };
             return estudiante;
         }
+
+
         public bool Eliminar(List<Estudiante>estudiantes)
         {
             bool estado;
@@ -85,5 +90,7 @@ namespace Datos
             }
             return estado;
         }
+
+
     }
 }

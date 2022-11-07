@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.IO;
 namespace Datos
 {
-    public class RepositorioRecibos:Archivos
+    public class RepositorioRecibos:Archivos,ICrudDatos<Recibo>
     {
         bool Estado;
         public RepositorioRecibos()
         {
             ruta = "Recibos.txt";
         }
+
+
         public bool Guardar(Recibo recibo)
         {
             try
@@ -27,6 +29,7 @@ namespace Datos
             }
             return Estado;
         }
+
 
         public List<Recibo> Leer()
         {
@@ -48,23 +51,25 @@ namespace Datos
             }
             return null;
         }
+
         public Recibo Mapear(string Linea)
         {
             var recibo = new Recibo
             {
                 Concepto = Linea.Trim().Split(';')[0],
-                Descripcion = Linea.Trim().Split(';')[1],
-                Cantidad = double.Parse(Linea.Trim().Split(';')[2]),
-                CodigoReferencia = Linea.Trim().Split(';')[3],
-                FechaLimite = DateTime.Parse(Linea.Trim().Split(';')[4]),
-                FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[5]),
-                FormaPago = Linea.Trim().Split(';')[6],
-                EstadoPago = bool.Parse(Linea.Trim().Split(';')[7]),
-                Observaciones = Linea.Trim().Split(';')[8]
+                Cantidad = double.Parse(Linea.Trim().Split(';')[1]),
+                CodigoReferencia = Linea.Trim().Split(';')[2],
+                FechaLimite = DateTime.Parse(Linea.Trim().Split(';')[3]),
+                FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[4]),
+                Banco = Linea.Trim().Split(';')[5],
+                EstadoPago = bool.Parse(Linea.Trim().Split(';')[6]),
+                Observaciones = Linea.Trim().Split(';')[7],
+                Id = int.Parse(Linea.Trim().Split(';')[8]),
             };
 
             return recibo;
         }
+
         public bool Eliminar(List<Recibo> listaRecibos)
         {
             bool estado;
@@ -86,5 +91,6 @@ namespace Datos
             }
             return estado;
         }
+
     }
 }

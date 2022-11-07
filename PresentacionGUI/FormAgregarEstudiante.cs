@@ -18,32 +18,31 @@ namespace PresentacionGUI
         public FormAgregarEstudiante()
         {
             InitializeComponent();
-            IdCreciente();
+            //IdCreciente();
             Escuela();
         }
-        public void IdCreciente()
-        {
-            List<Estudiante> estudiantes;
+        //public void IdCreciente()
+        //{
+        //    List<Estudiante> estudiantes;
 
-            estudiantes = servicioEstudiante.Mostrar();
-            if (servicioEstudiante.Mostrar() == null)
-            {
-                txtId.Text = "1";
-                txtId.Enabled = false;
-            }
-            else
-            {
-                int size = estudiantes.Count;
-                size += 1;
-                txtId.Text = size.ToString();
-                txtId.Enabled = false;
-            }
-        }
+        //    estudiantes = servicioEstudiante.Mostrar();
+        //    if (servicioEstudiante.Mostrar() == null)
+        //    {
+        //        txtId.Text = "1";
+        //        txtId.Enabled = false;
+        //    }
+        //    else
+        //    {
+        //        int size = estudiantes.Count;
+        //        size += 1;
+        //        txtId.Text = size.ToString();
+        //        txtId.Enabled = false;
+        //    }
+        //}
 
         private void FormAgregarEstudiante_Load(object sender, EventArgs e)
         {
             formAgregar.OcultarAgregar();
-            
         }
 
 
@@ -54,29 +53,45 @@ namespace PresentacionGUI
 
         void Guardar()
         {
-            Estudiante estudiante = new Estudiante();
-            estudiante.Id = int.Parse(txtId.Text);
-            estudiante.Nombres = txtNombre.Text;
-            estudiante.Apellidos = txtApellidos.Text;
-            if (rdHombre.Checked)
+            if (txtId.Text==""||txtNombre.Text==""||txtApellidos.Text==""||txtCurso.Text==""||cbPeriodo.Text==""||cbEscuela.Text=="")
             {
-                estudiante.Sexo = 'M';
+                MessageBox.Show("FALTAN DATOS POR COMPLETAR", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                estudiante.Sexo = 'F';
+                try
+                {
+                    Estudiante estudiante = new Estudiante();
+                    estudiante.Id = int.Parse(txtId.Text);
+                    estudiante.Nombres = txtNombre.Text;
+                    estudiante.Apellidos = txtApellidos.Text;
+                    if (rdHombre.Checked)
+                    {
+                        estudiante.Sexo = 'M';
+                    }
+                    else
+                    {
+                        estudiante.Sexo = 'F';
+                    }
+                    estudiante.curso = txtCurso.Text;
+                    estudiante.Grado = txtGrado.Text;
+                    estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
+                    estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
+                    var mensaje = servicioEstudiante.Guardar(estudiante);
+                    MessageBox.Show(mensaje.ToUpper(), "Regristro Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Limpiar(this, panelEstudiantes);
+                    //IdCreciente();
+                }
+                catch (Exception e)
+                {
+
+                    MessageBox.Show(e.Message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
-            estudiante.curso = txtCurso.Text;
-            estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
-            estudiante.PromPonderado = double.Parse(txtPromedio.Text);
-            estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
-            var mensaje = servicioEstudiante.Guardar(estudiante);
-            MessageBox.Show(mensaje, "Regristro Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Limpiar(this, groupBox1);
-            cbEscuela.SelectedIndex = -1;
-            cbPeriodo.SelectedIndex = -1;
-            IdCreciente();
         }
+
+
         ServicioEscuela servicioEscuela = new ServicioEscuela();
         public void Escuela()
         {
@@ -86,13 +101,17 @@ namespace PresentacionGUI
             }
             
         }
-        private void Limpiar(Control control, GroupBox group2)
+        private void Limpiar(Control control, Panel group2)
         {
             foreach (var txt in group2.Controls)
             {
                 if (txt is TextBox)
                 {
                     ((TextBox)txt).Clear();
+                    rdMujer.Checked = false;
+                    rdHombre.Checked = false;
+                    cbEscuela.SelectedIndex = -1;
+                    cbPeriodo.SelectedIndex = -1;
                 }
             }
         }
@@ -107,9 +126,14 @@ namespace PresentacionGUI
             formAgregar.SoloLetras(e.KeyChar);
         }
 
-        private void txtPromedio_KeyPress(object sender, KeyPressEventArgs e)
+        private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            
+            Limpiar(this, panelEstudiantes);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

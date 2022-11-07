@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Recibo
+    public class Recibo:Estudiante
     {
 
         public string Concepto { get; set; }
-        public string Descripcion { get; set; }
         public double Cantidad { get; set; }
         public string CodigoReferencia { get; set; }
         public DateTime FechaLimite { get; set; }
         public DateTime FechaExtraordinaria { get; set; }
 
-        public string FormaPago { get; set; }
+        public string Banco { get; set; }
         public bool EstadoPago { get; set; }
         public string Observaciones { get; set; }
 
@@ -30,8 +29,8 @@ namespace Entidades
         }
         public override string ToString()
         {
-            return $"{Concepto};{Descripcion};{Cantidad};{CodigoReferencia};{FechaLimite}" +
-                $";{FechaExtraordinaria};{FormaPago};{EstadoPago};{Observaciones}"; 
+            return $"{Concepto};{Cantidad};{CodigoReferencia};{FechaLimite}" +
+                $";{FechaExtraordinaria};{Banco};{EstadoPago};{Observaciones};{Id}"; 
         }
 
     }

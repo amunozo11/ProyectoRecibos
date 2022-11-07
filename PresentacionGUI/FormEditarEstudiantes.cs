@@ -50,11 +50,10 @@ namespace PresentacionGUI
             {
                 estudiante.Sexo = 'F';
             }
-            estudiante.Grado = txtCurso.Text;
+            estudiante.curso = txtCurso.Text;
+            estudiante.Grado = txtGrado.Text;
             estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
-            estudiante.PromPonderado = float.Parse(txtPromedio.Text);
             estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
-
             var mensaje = servicioEstudiante.Actualizar(estudianteOld, estudiante);
             var r = MessageBox.Show(mensaje, "Editar Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (r == DialogResult.OK)

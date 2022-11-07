@@ -31,7 +31,7 @@ namespace PresentacionGUI
                 foreach (var item in servicioEstudiante.Mostrar())
                 {
                     GrillaEstudiantes.Rows.Add(item.Id, item.Nombres, item.Apellidos, item.Sexo,
-                    item.curso, item.PeriodoEstudio, item.PromPonderado, item.EscuelaRegistrada);
+                    item.curso,item.Grado, item.PeriodoEstudio, item.EscuelaRegistrada);
                 }
             }
 
@@ -46,7 +46,9 @@ namespace PresentacionGUI
 
         public void Editar()
         {
-            formEditarEstudiante.txtId.Text = GrillaEstudiantes.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                formEditarEstudiante.txtId.Text = GrillaEstudiantes.CurrentRow.Cells[0].Value.ToString();
             formEditarEstudiante.txtNombre.Text = GrillaEstudiantes.CurrentRow.Cells[1].Value.ToString();
             formEditarEstudiante.txtApellidos.Text = GrillaEstudiantes.CurrentRow.Cells[2].Value.ToString();
             string hombre = GrillaEstudiantes.CurrentRow.Cells[3].Value.ToString();
@@ -60,11 +62,18 @@ namespace PresentacionGUI
             }
             
             formEditarEstudiante.txtCurso.Text = GrillaEstudiantes.CurrentRow.Cells[4].Value.ToString();
-            formEditarEstudiante.cbPeriodo.Text = GrillaEstudiantes.CurrentRow.Cells[5].Value.ToString();
-            formEditarEstudiante.txtPromedio.Text = GrillaEstudiantes.CurrentRow.Cells[6].Value.ToString();
+            formEditarEstudiante.txtGrado.Text = GrillaEstudiantes.CurrentRow.Cells[5].Value.ToString();
+            formEditarEstudiante.cbPeriodo.Text = GrillaEstudiantes.CurrentRow.Cells[6].Value.ToString();
             formEditarEstudiante.cbEscuela.Text = GrillaEstudiantes.CurrentRow.Cells[7].Value.ToString();
             formEditarEstudiante.ShowDialog();
             RefrescarGrilla();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message, "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         public void RefrescarGrilla()
@@ -84,7 +93,7 @@ namespace PresentacionGUI
         {
             var pregunta = MessageBox.Show("¿Esta seguro de eliminar: " + GrillaEstudiantes.CurrentRow.Cells[1].Value.ToString() + "?", "Eliminar Escuela", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             var estudiante = new Estudiante();
-            estudiante.Id = int.Parse(GrillaEstudiantes.Rows[fila].Cells[0].Value.ToString());
+            estudiante.Id = int.Parse(GrillaEstudiantes.Rows[2].Cells[0].Value.ToString());
             if (pregunta == DialogResult.Yes)
             {
                 Eliminar(estudiante);

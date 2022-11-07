@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class RepositorioEscuela:Archivos
+    public class RepositorioEscuela:Archivos,ICrudDatos<Escuela>
     {
         public RepositorioEscuela()
         {
             ruta = "Escuela.txt";
         }
+
+
         public bool Guardar(Escuela escuela)
         {
             try
@@ -30,6 +32,8 @@ namespace Datos
                 return false;
             }
         }
+
+
         public List<Escuela> Leer()
         {
             try
@@ -51,6 +55,8 @@ namespace Datos
             }
             return null;
         }
+
+
         public Escuela Mapear(string linea)
         {
             var escuela = new Escuela
@@ -63,6 +69,8 @@ namespace Datos
             };
             return escuela;
         }
+
+
         public bool Eliminar(List<Escuela> ListEscuela)
         {
             bool estado;
@@ -83,5 +91,7 @@ namespace Datos
             }
             return estado;
         }
+
+
     }
 }
