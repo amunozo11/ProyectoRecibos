@@ -63,7 +63,8 @@ namespace Datos
                 FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[4]),
                 Banco = Linea.Trim().Split(';')[5],
                 EstadoPago = bool.Parse(Linea.Trim().Split(';')[6]),
-                Observaciones = Linea.Trim().Split(';')[7]
+                Observaciones = Linea.Trim().Split(';')[7],
+                Id = int.Parse(Linea.Trim().Split(';')[8]),
             };
 
             return recibo;

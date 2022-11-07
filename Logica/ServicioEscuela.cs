@@ -91,14 +91,14 @@ namespace Logica
         }
 
 
-        public Escuela Buscar(string Nit)
+        public Escuela Buscar(string Nombre)
         {
             try
             {
                 _ = new Escuela();
                 foreach (var item in ListEscuelas)
                 {
-                    if (item.NiT.Equals(Nit))
+                    if (item.NombreEscuela.Trim().Equals(Nombre.ToUpper()))
                     {
                         Escuela escuela = item;
                         return escuela;

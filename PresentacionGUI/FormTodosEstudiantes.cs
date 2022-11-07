@@ -93,7 +93,7 @@ namespace PresentacionGUI
         {
             var pregunta = MessageBox.Show("¿Esta seguro de eliminar: " + GrillaEstudiantes.CurrentRow.Cells[1].Value.ToString() + "?", "Eliminar Escuela", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             var estudiante = new Estudiante();
-            estudiante.Id = int.Parse(GrillaEstudiantes.Rows[fila].Cells[0].Value.ToString());
+            estudiante.Id = int.Parse(GrillaEstudiantes.Rows[2].Cells[0].Value.ToString());
             if (pregunta == DialogResult.Yes)
             {
                 Eliminar(estudiante);
