@@ -106,7 +106,7 @@ namespace PresentacionGUI
         public Entidades.Escuela BuscarEscuela()
         {
             string NombreEscuela= GrillaSelect.Rows[indice].Cells[1].Value.ToString();
-            var escuela = serviceEscuela.Buscar(NombreEscuela);
+            var escuela = serviceEscuela.BuscarNombre(NombreEscuela);
             return escuela;
         }
         public Entidades.Recibo ReciboInfo()

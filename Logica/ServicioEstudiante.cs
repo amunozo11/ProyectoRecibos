@@ -34,15 +34,13 @@ namespace Logica
         {
             try
             {
-                foreach (var item in ListaEstudiantes)
-                {
-                    if (estudiante.Id.Equals(item.Id))
-                    {
 
-                        return $"YA EXISTE UN ESTUDIANTE CON ID: {estudiante.Id}";
-                    }
-                }
                 var estado = RutaEstudiantes.Guardar(estudiante);
+                if (ListaEstudiantes != null)
+                {
+                    VerificarId(estudiante);
+                }
+                
                 return estado ? $"ESTUDIANTE GUARDADO CON NOMBRE: {estudiante.Nombres}" :
                 $"ERROR AL GUARDAR EL ESTDIANTE :{estudiante.Nombres.ToUpper()}";
             }
@@ -50,6 +48,31 @@ namespace Logica
             {
                 return e.Message;
             }
+
+        }
+
+        public string VerificarId(Estudiante estudiante)
+        {
+            string estado = "No";
+            try
+            {
+                
+                foreach (var item in ListaEstudiantes)
+                {
+                    if (estudiante.Id.Equals(item.Id))
+                    {
+                        estado = "Si";
+
+                    }
+                }
+                
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+            return estado;
         }
 
 

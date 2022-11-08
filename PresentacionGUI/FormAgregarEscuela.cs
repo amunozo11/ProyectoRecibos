@@ -24,39 +24,49 @@ namespace PresentacionGUI
 
         void Guardar()
         {
-            Escuela escuela = new Escuela();
-            escuela.NiT = txtNit.Text;
-            escuela.NombreEscuela = txtNombre.Text;
-            escuela.Direccion = txtDireccion.Text;
-            escuela.Telefono = txtTelefono.Text;
-            escuela.Correo = txtCorreo.Text;
-            var mensaje = servicioEscuela.Guardar(escuela);
-            MessageBox.Show(mensaje, "Regristro escuela", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Limpiar(this, groupBox1);
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Guardar();
-        }
-
-        private void FormAgregarFamiliar_Load(object sender, EventArgs e)
-        {
-            OcultarAgregar();
-
-        }
-
-        public void OcultarAgregar()
-        {
-            if (txtNit.Text != "")
+            if (txtNit.Text == ""||txtNombre.Text == ""||txtDireccion.Text == ""||txtTelefono.Text == ""||txtCorreo.Text == "")
             {
-                btnAgregar.Enabled = true;
+                MessageBox.Show("FALTAN DATOS POR COMPLETAR", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                btnAgregar.Enabled = false;
+                try
+                {
+                    Escuela escuela = new Escuela();
+                    escuela.NiT = txtNit.Text;
+                    escuela.NombreEscuela = txtNombre.Text;
+                    escuela.Direccion = txtDireccion.Text;
+                    escuela.Telefono = txtTelefono.Text;
+                    escuela.Correo = txtCorreo.Text;
+                    var mensaje = servicioEscuela.Guardar(escuela);
+                    MessageBox.Show(mensaje, "Regristro escuela", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
         }
+
+
+        private void FormAgregarFamiliar_Load(object sender, EventArgs e)
+        {
+            //OcultarAgregar();
+
+        }
+
+        //public void OcultarAgregar()
+        //{
+        //    if (txtNit.Text != "")
+        //    {
+        //        btnAgregar.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        btnAgregar.Enabled = false;
+        //    }
+        //}
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -95,30 +105,52 @@ namespace PresentacionGUI
             }
         }
 
+        //private void Limpiar(Control control, GroupBox group2)
+        //{
+        //    foreach (var txt in group2.Controls)
+        //    {
+        //        if (txt is TextBox)
+        //        {
+        //            ((TextBox)txt).Clear();
+        //        }
+        //        else if (txt is DateTimePicker)
+        //        {
+        //            ((DateTimePicker)txt).Value = DateTime.Now;
+        //        }
+        //    }
+        //}
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Limpiar(this, groupBox1);
+            SoloNumeros(e);
         }
 
-        private void Limpiar(Control control, GroupBox group2)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            foreach (var txt in group2.Controls)
+            Guardar();
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar(this, panelEscuelas);
+        }
+
+        private void Limpiar(Control control, Panel panel)
+        {
+            foreach(var txt in panel.Controls)
             {
                 if (txt is TextBox)
                 {
                     ((TextBox)txt).Clear();
                 }
-                else if (txt is DateTimePicker)
-                {
-                    ((DateTimePicker)txt).Value = DateTime.Now;
-                }
             }
         }
 
-        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            SoloNumeros(e);
+            this.Dispose();
         }
     }
 }

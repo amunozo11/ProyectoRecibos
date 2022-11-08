@@ -42,7 +42,7 @@ namespace PresentacionGUI
 
         private void FormAgregarEstudiante_Load(object sender, EventArgs e)
         {
-            formAgregar.OcultarAgregar();
+            //formAgregar.OcultarAgregar();
         }
 
 
@@ -95,11 +95,14 @@ namespace PresentacionGUI
         ServicioEscuela servicioEscuela = new ServicioEscuela();
         public void Escuela()
         {
-            foreach (var item in servicioEscuela.Mostrar())
+            var EscuelaNombre = servicioEscuela.Mostrar();
+            if (EscuelaNombre != null)
             {
-                cbEscuela.Items.Add(item.NombreEscuela);
+                foreach (var item in EscuelaNombre)
+                {
+                    cbEscuela.Items.Add(item.NombreEscuela);
+                }
             }
-            
         }
         private void Limpiar(Control control, Panel group2)
         {

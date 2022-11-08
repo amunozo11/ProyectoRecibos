@@ -42,10 +42,11 @@ namespace PresentacionGUI
             Editar();
         }
 
-        FormEditarEstudiantes formEditarEstudiante = new FormEditarEstudiantes();
+        
 
         public void Editar()
         {
+            FormEditarEstudiantes formEditarEstudiante = new FormEditarEstudiantes();
             try
             {
                 formEditarEstudiante.txtId.Text = GrillaEstudiantes.CurrentRow.Cells[0].Value.ToString();

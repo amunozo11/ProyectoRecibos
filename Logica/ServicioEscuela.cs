@@ -32,6 +32,10 @@ namespace Logica
             try
             {
                 var estado= RutaEscuela.Guardar(escuela);
+                if (ListEscuelas != null)
+                {
+                    VerificarNit(escuela);
+                }
                 return estado ? "ESCUELA REGISTRADA" : "ERROR AL REGISTRAR LA ESCUELA";
             }
             catch (Exception e)
@@ -39,6 +43,31 @@ namespace Logica
 
                 return e.Message + e.StackTrace;
             }
+        }
+
+
+        public string VerificarNit(Escuela escuela)
+        {
+            string estado = "No";
+            try
+            {
+
+                foreach (var item in ListEscuelas)
+                {
+                    if (escuela.NiT.Equals(item.NiT))
+                    {
+                        estado = "Si";
+
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+            return estado;
         }
 
 
@@ -91,7 +120,28 @@ namespace Logica
         }
 
 
-        public Escuela Buscar(string Nombre)
+        public Escuela Buscar(string Nit)
+        {
+            try
+            {
+                _ = new Escuela();
+                foreach (var item in ListEscuelas)
+                {
+                    if (item.NiT.Trim().Equals(Nit))
+                    {
+                        Escuela escuela = item;
+                        return escuela;
+                    }
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                return e.Message + e.StackTrace;
+            }
+        }
+
+        public Escuela BuscarNombre(string Nombre)
         {
             try
             {

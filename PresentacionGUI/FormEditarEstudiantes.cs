@@ -37,30 +37,38 @@ namespace PresentacionGUI
         int Id;
         void Editar()
         {
-            var estudiante = new Estudiante();
-            var estudianteOld = servicioEstudiante.Buscar(Id);
-            estudiante.Id = int.Parse(txtId.Text);
-            estudiante.Nombres = txtNombre.Text;
-            estudiante.Apellidos = txtApellidos.Text;
-            if (rdHombre.Checked)
-            {
-                estudiante.Sexo = 'M';
-            }
-            else
-            {
-                estudiante.Sexo = 'F';
-            }
-            estudiante.curso = txtCurso.Text;
-            estudiante.Grado = txtGrado.Text;
-            estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
-            estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
-            var mensaje = servicioEstudiante.Actualizar(estudianteOld, estudiante);
-            var r = MessageBox.Show(mensaje, "Editar Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (r == DialogResult.OK)
-            {
-                this.Close();
-            }
+            //var EscuelaNombre = servicioEscuela.Mostrar();
+            //if (EscuelaNombre != null)
+            //{
+                var estudiante = new Estudiante();
+                var estudianteOld = servicioEstudiante.Buscar(Id);
+                estudiante.Id = int.Parse(txtId.Text);
+                estudiante.Nombres = txtNombre.Text;
+                estudiante.Apellidos = txtApellidos.Text;
+                if (rdHombre.Checked)
+                {
+                    estudiante.Sexo = 'M';
+                }
+                else
+                {
+                    estudiante.Sexo = 'F';
+                }
+                estudiante.curso = txtCurso.Text;
+                estudiante.Grado = txtGrado.Text;
+                estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
 
+                estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
+                var mensaje = servicioEstudiante.Actualizar(estudianteOld, estudiante);
+                var r = MessageBox.Show(mensaje, "Editar Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (r == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Necesita una escuela donde matricular al estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            //}
         }
         private void FormEditarEstudiantes_Load(object sender, EventArgs e)
         {
