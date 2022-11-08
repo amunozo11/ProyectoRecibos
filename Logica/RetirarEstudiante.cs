@@ -9,7 +9,7 @@ namespace Logica
 {
     public class RetirarEstudiante : IEstado<Estudiante>
     {
-        public bool Estado(Estudiante tipo)
+        public bool Estado(string  id)
         {
             throw new NotImplementedException();
         }

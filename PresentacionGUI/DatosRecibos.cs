@@ -37,6 +37,7 @@ namespace PresentacionGUI
             recibo.FechaLimite = DateTime.Parse(DateLimete.Value.ToString());
             recibo.FechaExtraordinaria = DateTime.Parse(DateExtra.Value.ToString());
             recibo.Observaciones = txtObservacion.Text;
+            recibo.EstadoPago = "PENDIENTE";
             recibo.Id = int.Parse(GrillaSelect.Rows[indice].Cells[0].Value.ToString());
             var mensage=logicaRecibo.Guardar(recibo);
             MessageBox.Show(mensage,"INFO",MessageBoxButtons.OK,MessageBoxIcon.Information);

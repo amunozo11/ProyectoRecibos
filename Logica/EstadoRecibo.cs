@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,19 @@ namespace Logica
 {
     public class EstadoRecibo:IEstado<Recibo>
     {
-        public bool Estado(Recibo recibo)
+        RepositorioRecibos repositorio=new RepositorioRecibos();
+        bool estadoDeuda;
+        public bool Estado(string Referencia)
         {
-            //aqui agregar odigo para validar si el recibo fue pagado
-            // 
-            bool estadoDeuda = true;
+            
+            foreach (var item in repositorio.Leer())
+            {
+                if (item.CodigoReferencia.Equals(Referencia)&&item.EstadoPago.Equals("PAGADO"))
+                {
+                    estadoDeuda = true; 
+                }
+            }
+            
             return estadoDeuda;
         }
     }

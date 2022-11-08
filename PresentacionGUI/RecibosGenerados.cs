@@ -20,11 +20,18 @@ namespace PresentacionGUI
         ServicioRecibo ServicioRecibo=new ServicioRecibo();
         void cargarGrilla()
         {
-            GrillaRecibosGenerados.Rows.Clear();
-            foreach (var item in ServicioRecibo.Mostrar())
+            if (ServicioRecibo.Mostrar()==null)
             {
+                MessageBox.Show("NO HAY RECIBOS  REGISTRADOS", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                GrillaRecibosGenerados.Rows.Clear();
+                foreach (var item in ServicioRecibo.Mostrar())
+                {
 
-                GrillaRecibosGenerados.Rows.Add(item.CodigoReferencia, item.Concepto, item.Cantidad, item.FechaLimite, item.EstadoPago); ;
+                    GrillaRecibosGenerados.Rows.Add(item.CodigoReferencia, item.Concepto, item.Cantidad, item.FechaLimite.ToShortDateString(), item.EstadoPago);
+                }
             }
         }
 
@@ -40,8 +47,18 @@ namespace PresentacionGUI
         void Cobrar()
         {
             var recibo2 = BuscarRecibo();
-            recibo2.EstadoPago = true;
-            ServicioRecibo.Actualizar(BuscarRecibo(),recibo2);   
+            EstadoRecibo estadoRecibo = new EstadoRecibo();
+            var estado=estadoRecibo.Estado(recibo2.CodigoReferencia);
+            if (estado !=true)
+            {
+                recibo2.EstadoPago = "PAGADO";
+                ServicioRecibo.Actualizar(BuscarRecibo(), recibo2);
+            }
+            else
+            {
+                MessageBox.Show("EL RECIBO YA FUE PAGADO","INFO",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+              
         }
         Entidades.Recibo BuscarRecibo()
         {

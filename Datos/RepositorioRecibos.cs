@@ -62,7 +62,7 @@ namespace Datos
                 FechaLimite = DateTime.Parse(Linea.Trim().Split(';')[3]),
                 FechaExtraordinaria = DateTime.Parse(Linea.Trim().Split(';')[4]),
                 Banco = Linea.Trim().Split(';')[5],
-                EstadoPago = bool.Parse(Linea.Trim().Split(';')[6]),
+                EstadoPago = Linea.Trim().Split(';')[6],
                 Observaciones = Linea.Trim().Split(';')[7],
                 Id = int.Parse(Linea.Trim().Split(';')[8]),
             };

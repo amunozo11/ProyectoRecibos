@@ -8,6 +8,6 @@ namespace Logica
 {
     public interface IEstado<Tipo>
     {
-        bool Estado(Tipo tipo);
+        bool Estado(string codio);
     }
 }

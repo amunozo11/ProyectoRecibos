@@ -17,7 +17,7 @@ namespace Entidades
         public DateTime FechaExtraordinaria { get; set; }
 
         public string Banco { get; set; }
-        public bool EstadoPago { get; set; }
+        public String EstadoPago { get; set; }
         public string Observaciones { get; set; }
 
         public Escuela EscuelaRecibo
