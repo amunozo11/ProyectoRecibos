@@ -65,6 +65,7 @@ namespace Datos
                 Grado = linea.Trim().Split(';')[5],
                 PeriodoEstudio = linea.Trim().Split(';')[6],
                 EscuelaRegistrada = linea.Trim().Split(';')[7],
+                TieneRecibo = bool.Parse(linea.Trim().Split(';')[8]),
             };
             return estudiante;
         }

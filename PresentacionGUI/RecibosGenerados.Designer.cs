@@ -28,19 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GrillaRecibosGenerados = new System.Windows.Forms.DataGridView();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.btnCobrar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.contextMenuRecibos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verRecibo = new System.Windows.Forms.ToolStripMenuItem();
+            this.EliminarReciboMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelBotones = new System.Windows.Forms.Panel();
-            this.btnCobrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaRecibosGenerados)).BeginInit();
             this.panelBotones.SuspendLayout();
+            this.contextMenuRecibos.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrillaRecibosGenerados
@@ -67,10 +75,13 @@
             this.GrillaRecibosGenerados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaRecibosGenerados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.IdAlumno,
+            this.Column6,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
+            this.GrillaRecibosGenerados.ContextMenuStrip = this.contextMenuRecibos;
             this.GrillaRecibosGenerados.EnableHeadersVisualStyles = false;
             this.GrillaRecibosGenerados.GridColor = System.Drawing.Color.MediumSlateBlue;
             this.GrillaRecibosGenerados.Location = new System.Drawing.Point(31, 63);
@@ -97,11 +108,84 @@
             this.GrillaRecibosGenerados.TabIndex = 4;
             this.GrillaRecibosGenerados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaRecibosGenerados_CellClick);
             // 
+            // panelBotones
+            // 
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(5)))), ((int)(((byte)(22)))));
+            this.panelBotones.Controls.Add(this.btnEliminar);
+            this.panelBotones.Controls.Add(this.btnCobrar);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBotones.Location = new System.Drawing.Point(0, 421);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(684, 43);
+            this.panelBotones.TabIndex = 5;
+            // 
+            // btnCobrar
+            // 
+            this.btnCobrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnCobrar.FlatAppearance.BorderSize = 0;
+            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrar.ForeColor = System.Drawing.Color.White;
+            this.btnCobrar.Location = new System.Drawing.Point(144, 8);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Size = new System.Drawing.Size(189, 23);
+            this.btnCobrar.TabIndex = 36;
+            this.btnCobrar.Text = "Cobrar Recibo";
+            this.btnCobrar.UseVisualStyleBackColor = false;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(339, 8);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(88, 23);
+            this.btnEliminar.TabIndex = 37;
+            this.btnEliminar.Text = "Eliminar Recibo";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // contextMenuRecibos
+            // 
+            this.contextMenuRecibos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verRecibo,
+            this.EliminarReciboMenu});
+            this.contextMenuRecibos.Name = "contextMenuRecibos";
+            this.contextMenuRecibos.Size = new System.Drawing.Size(130, 48);
+            // 
+            // verRecibo
+            // 
+            this.verRecibo.Name = "verRecibo";
+            this.verRecibo.Size = new System.Drawing.Size(129, 22);
+            this.verRecibo.Text = "Ver Recibo";
+            this.verRecibo.Click += new System.EventHandler(this.verRecibo_Click);
+            // 
+            // EliminarReciboMenu
+            // 
+            this.EliminarReciboMenu.Name = "EliminarReciboMenu";
+            this.EliminarReciboMenu.Size = new System.Drawing.Size(129, 22);
+            this.EliminarReciboMenu.Text = "Eliminar";
+            this.EliminarReciboMenu.Click += new System.EventHandler(this.EliminarReciboMenu_Click);
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "Referencia";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // IdAlumno
+            // 
+            this.IdAlumno.HeaderText = "Id Alumno";
+            this.IdAlumno.Name = "IdAlumno";
+            this.IdAlumno.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Escuela";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column2
             // 
@@ -127,30 +211,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // panelBotones
-            // 
-            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(5)))), ((int)(((byte)(22)))));
-            this.panelBotones.Controls.Add(this.btnCobrar);
-            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBotones.Location = new System.Drawing.Point(0, 421);
-            this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(684, 43);
-            this.panelBotones.TabIndex = 5;
-            // 
-            // btnCobrar
-            // 
-            this.btnCobrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.btnCobrar.FlatAppearance.BorderSize = 0;
-            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobrar.ForeColor = System.Drawing.Color.White;
-            this.btnCobrar.Location = new System.Drawing.Point(217, 10);
-            this.btnCobrar.Name = "btnCobrar";
-            this.btnCobrar.Size = new System.Drawing.Size(189, 23);
-            this.btnCobrar.TabIndex = 36;
-            this.btnCobrar.Text = "Cobrar Recibo";
-            this.btnCobrar.UseVisualStyleBackColor = false;
-            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
-            // 
             // RecibosGenerados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +224,7 @@
             this.Load += new System.EventHandler(this.RecibosGenerados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrillaRecibosGenerados)).EndInit();
             this.panelBotones.ResumeLayout(false);
+            this.contextMenuRecibos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -171,12 +232,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView GrillaRecibosGenerados;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Button btnCobrar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuRecibos;
+        private System.Windows.Forms.ToolStripMenuItem verRecibo;
+        private System.Windows.Forms.ToolStripMenuItem EliminarReciboMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdAlumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel panelBotones;
-        private System.Windows.Forms.Button btnCobrar;
     }
 }

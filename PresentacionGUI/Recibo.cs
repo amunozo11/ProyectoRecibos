@@ -41,12 +41,16 @@ namespace PresentacionGUI
             labelPeriodo.Text = ReciboEstudiante.PeriodoEstudio;
             labelObserva.Text = recibo.Observaciones;
             labelRefe.Text = recibo.CodigoReferencia;
-            labelLimite.Text = recibo.FechaLimite.ToString();
+            labelLimite.Text = recibo.FechaLimite.ToShortDateString().ToString();
             labelConcepto.Text = recibo.Concepto;
             labelCorreo.Text = escuela.Correo;
             labelDireccion.Text = escuela.Direccion;
             labelValor.Text = recibo.Cantidad.ToString();
             labelId.Text = ReciboEstudiante.Id.ToString();
+            labelNitEsc.Text = escuela.NiT;
+            labeLtelefono.Text=escuela.NiT.ToString();
+
+
         }
 
         private void Recibo_Load(object sender, EventArgs e)

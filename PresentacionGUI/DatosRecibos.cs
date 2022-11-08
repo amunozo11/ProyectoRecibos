@@ -20,27 +20,38 @@ namespace PresentacionGUI
         }
         Logica.ServicioRecibo logicaRecibo=new Logica.ServicioRecibo();
         Logica.ServicioEstudiante estudiantes = new ServicioEstudiante();
-        PresentacionGUI.Recibo recibo = new Recibo();
+        
         ServicioEscuela serviceEscuela = new ServicioEscuela();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Guardar();
+            TieneRecibo();
             GenerarRecibo();
+            CargarGrilla();
         }
         void Guardar()
         {
-            Entidades.Recibo recibo = new Entidades.Recibo();
-            recibo.CodigoReferencia = txtReferencia.Text;
-            recibo.Concepto=CbConcepto.SelectedItem.ToString();
-            recibo.Cantidad = double.Parse(txtValor.Text);
-            recibo.Banco = CbBanco.SelectedItem.ToString();
-            recibo.FechaLimite = DateTime.Parse(DateLimete.Value.ToString());
-            recibo.FechaExtraordinaria = DateTime.Parse(DateExtra.Value.ToString());
-            recibo.Observaciones = txtObservacion.Text;
-            recibo.EstadoPago = "PENDIENTE";
-            recibo.Id = int.Parse(GrillaSelect.Rows[indice].Cells[0].Value.ToString());
-            var mensage=logicaRecibo.Guardar(recibo);
-            MessageBox.Show(mensage,"INFO",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            try
+            {
+                Entidades.Recibo recibo = new Entidades.Recibo();
+                recibo.CodigoReferencia = txtReferencia.Text;
+                recibo.Concepto = CbConcepto.SelectedItem.ToString();
+                recibo.Cantidad = double.Parse(txtValor.Text);
+                recibo.Banco = CbBanco.SelectedItem.ToString();
+                recibo.FechaLimite = DateTime.Parse(DateLimete.Value.ToString());
+                recibo.FechaExtraordinaria = DateTime.Parse(DateExtra.Value.ToString());
+                recibo.Observaciones = txtObservacion.Text;
+                recibo.EstadoPago = "PENDIENTE";
+                recibo.Id = int.Parse(GrillaSelect.Rows[indice].Cells[0].Value.ToString());
+                recibo.EscuelaRegistrada = GrillaSelect.Rows[indice].Cells[1].Value.ToString();
+                var mensage = logicaRecibo.Guardar(recibo);
+                MessageBox.Show(mensage, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -61,7 +72,7 @@ namespace PresentacionGUI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
         
         void CargarGrilla()
@@ -72,9 +83,13 @@ namespace PresentacionGUI
             }
             else
             {
+                GrillaSelect.Rows.Clear();
                 foreach (var item in estudiantes.Mostrar())
                 {
-                    GrillaSelect.Rows.Add(item.Id,item.EscuelaRegistrada,item.Grado);
+                    if (item.TieneRecibo !=true)
+                    {
+                        GrillaSelect.Rows.Add(item.Id, item.EscuelaRegistrada, item.Grado);
+                    }     
                 }
             }
         }
@@ -95,8 +110,18 @@ namespace PresentacionGUI
         }
         void GenerarRecibo()
         {
-            recibo.GenerarRecibo(BuscarEstudiante(),BuscarEscuela(),ReciboInfo());
-            recibo.Show();
+            PresentacionGUI.Recibo recibo = new Recibo();
+            try
+            {
+                recibo.GenerarRecibo(BuscarEstudiante(), BuscarEscuela(), ReciboInfo());
+                recibo.ShowDialog();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+
         }
         public Estudiante BuscarEstudiante()
         {
@@ -104,6 +129,13 @@ namespace PresentacionGUI
             id = int.Parse(GrillaSelect.Rows[indice].Cells[0].Value.ToString());
             var estudianteEncontado = estudiantes.Buscar(id);
             return estudianteEncontado;
+        }
+        public void TieneRecibo()
+        {
+            var estudiantes1 = BuscarEstudiante();
+            estudiantes1.TieneRecibo = true;
+            estudiantes.Actualizar(BuscarEstudiante(),estudiantes1);
+
         }
         public Entidades.Escuela BuscarEscuela()
         {
@@ -122,6 +154,11 @@ namespace PresentacionGUI
             InfoRecibo.FechaLimite = DateTime.Parse(DateLimete.Value.ToString());
             InfoRecibo.FechaExtraordinaria = DateTime.Parse(DateExtra.Value.ToString());
             return InfoRecibo;
+        }
+
+        private void GrillaSelect_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indice = e.RowIndex;
         }
     }
 }

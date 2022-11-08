@@ -65,6 +65,7 @@ namespace Datos
                 EstadoPago = Linea.Trim().Split(';')[6],
                 Observaciones = Linea.Trim().Split(';')[7],
                 Id = int.Parse(Linea.Trim().Split(';')[8]),
+                EscuelaRegistrada = Linea.Trim().Split(';')[9], 
             };
 
             return recibo;

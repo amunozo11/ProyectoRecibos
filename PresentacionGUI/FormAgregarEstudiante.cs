@@ -77,6 +77,7 @@ namespace PresentacionGUI
                     estudiante.Grado = txtGrado.Text;
                     estudiante.PeriodoEstudio = cbPeriodo.SelectedItem.ToString();
                     estudiante.EscuelaRegistrada = cbEscuela.SelectedItem.ToString();
+                    estudiante.TieneRecibo = false;
                     var mensaje = servicioEstudiante.Guardar(estudiante);
                     MessageBox.Show(mensaje.ToUpper(), "Regristro Estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Limpiar(this, panelEstudiantes);

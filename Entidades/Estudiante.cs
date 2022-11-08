@@ -13,14 +13,11 @@ namespace Entidades
         public string Grado { get; set; }
         public string PeriodoEstudio { get; set; }
         public string EscuelaRegistrada { get; set; }
-        public bool Estado()
-        {
-            return false;
-        }
+        public bool TieneRecibo { get; set; }
         public override string ToString()
         {
             return $"{Nombres};{Apellidos};{Sexo};{Id}" +
-                $";{curso};{Grado};{PeriodoEstudio};{EscuelaRegistrada}";
+                $";{curso};{Grado};{PeriodoEstudio};{EscuelaRegistrada};{TieneRecibo}";
         }
     }
 }
