@@ -141,5 +141,10 @@ namespace PresentacionGUI
             FormulariosFijo(new DatosRecibos());
             OcultarSubMenu();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

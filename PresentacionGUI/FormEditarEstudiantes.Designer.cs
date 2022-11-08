@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarEstudiantes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGrado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -48,16 +51,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtGrado = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.txtGrado);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -85,6 +89,25 @@
             this.groupBox1.Size = new System.Drawing.Size(668, 425);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // txtGrado
+            // 
+            this.txtGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.txtGrado.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtGrado.Location = new System.Drawing.Point(82, 286);
+            this.txtGrado.Name = "txtGrado";
+            this.txtGrado.Size = new System.Drawing.Size(201, 20);
+            this.txtGrado.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(22, 289);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Grado";
             // 
             // groupBox2
             // 
@@ -127,7 +150,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(21, 334);
+            this.label7.Location = new System.Drawing.Point(193, 332);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 14;
@@ -135,9 +158,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(383, 116);
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(386, 115);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -146,9 +173,9 @@
             // 
             this.cbEscuela.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEscuela.FormattingEnabled = true;
-            this.cbEscuela.Location = new System.Drawing.Point(81, 334);
+            this.cbEscuela.Location = new System.Drawing.Point(244, 324);
             this.cbEscuela.Name = "cbEscuela";
-            this.cbEscuela.Size = new System.Drawing.Size(201, 21);
+            this.cbEscuela.Size = new System.Drawing.Size(122, 21);
             this.cbEscuela.TabIndex = 13;
             // 
             // cbPeriodo
@@ -160,7 +187,7 @@
             "2",
             "3",
             "4"});
-            this.cbPeriodo.Location = new System.Drawing.Point(81, 291);
+            this.cbPeriodo.Location = new System.Drawing.Point(82, 324);
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(88, 21);
             this.cbPeriodo.TabIndex = 12;
@@ -169,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(21, 291);
+            this.label6.Location = new System.Drawing.Point(22, 332);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 11;
@@ -179,7 +206,7 @@
             // 
             this.txtCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.txtCurso.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtCurso.Location = new System.Drawing.Point(81, 216);
+            this.txtCurso.Location = new System.Drawing.Point(82, 249);
             this.txtCurso.Name = "txtCurso";
             this.txtCurso.Size = new System.Drawing.Size(201, 20);
             this.txtCurso.TabIndex = 10;
@@ -188,7 +215,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(21, 219);
+            this.label5.Location = new System.Drawing.Point(22, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 9;
@@ -198,7 +225,7 @@
             // 
             this.rdMujer.AutoSize = true;
             this.rdMujer.ForeColor = System.Drawing.SystemColors.Control;
-            this.rdMujer.Location = new System.Drawing.Point(164, 180);
+            this.rdMujer.Location = new System.Drawing.Point(165, 213);
             this.rdMujer.Name = "rdMujer";
             this.rdMujer.Size = new System.Drawing.Size(51, 17);
             this.rdMujer.TabIndex = 8;
@@ -210,7 +237,7 @@
             // 
             this.rdHombre.AutoSize = true;
             this.rdHombre.ForeColor = System.Drawing.SystemColors.Control;
-            this.rdHombre.Location = new System.Drawing.Point(81, 180);
+            this.rdHombre.Location = new System.Drawing.Point(82, 213);
             this.rdHombre.Name = "rdHombre";
             this.rdHombre.Size = new System.Drawing.Size(62, 17);
             this.rdHombre.TabIndex = 7;
@@ -222,7 +249,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(21, 184);
+            this.label4.Location = new System.Drawing.Point(22, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 6;
@@ -232,7 +259,7 @@
             // 
             this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.txtApellidos.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtApellidos.Location = new System.Drawing.Point(81, 144);
+            this.txtApellidos.Location = new System.Drawing.Point(82, 177);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(201, 20);
             this.txtApellidos.TabIndex = 5;
@@ -241,7 +268,7 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtNombre.Location = new System.Drawing.Point(81, 101);
+            this.txtNombre.Location = new System.Drawing.Point(82, 134);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(201, 20);
             this.txtNombre.TabIndex = 4;
@@ -250,7 +277,7 @@
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.txtId.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtId.Location = new System.Drawing.Point(81, 61);
+            this.txtId.Location = new System.Drawing.Point(82, 94);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(66, 20);
             this.txtId.TabIndex = 3;
@@ -260,7 +287,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(21, 147);
+            this.label3.Location = new System.Drawing.Point(22, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -270,7 +297,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(21, 104);
+            this.label2.Location = new System.Drawing.Point(22, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -280,30 +307,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(47, 63);
+            this.label1.Location = new System.Drawing.Point(48, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // txtGrado
+            // pictureBox2
             // 
-            this.txtGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.txtGrado.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtGrado.Location = new System.Drawing.Point(81, 253);
-            this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(201, 20);
-            this.txtGrado.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(21, 256);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Grado";
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(82, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(505, 76);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
             // 
             // FormEditarEstudiantes
             // 
@@ -311,13 +329,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 425);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormEditarEstudiantes";
-            this.Text = "FormEditarEstudiantes";
+            this.Text = "Editar Estudiante";
             this.Load += new System.EventHandler(this.FormEditarEstudiantes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +367,6 @@
         private System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.TextBox txtGrado;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
