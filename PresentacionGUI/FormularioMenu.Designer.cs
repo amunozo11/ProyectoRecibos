@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioMenu));
             this.panelLateralMenu = new System.Windows.Forms.Panel();
             this.panelMenuRecibo = new System.Windows.Forms.Panel();
-            this.BtnPagar = new System.Windows.Forms.Button();
             this.btnListRecibos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRecibo = new System.Windows.Forms.Button();
@@ -77,29 +76,13 @@
             // panelMenuRecibo
             // 
             this.panelMenuRecibo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMenuRecibo.Controls.Add(this.BtnPagar);
             this.panelMenuRecibo.Controls.Add(this.btnListRecibos);
             this.panelMenuRecibo.Controls.Add(this.button1);
             this.panelMenuRecibo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuRecibo.Location = new System.Drawing.Point(0, 409);
+            this.panelMenuRecibo.Location = new System.Drawing.Point(0, 413);
             this.panelMenuRecibo.Name = "panelMenuRecibo";
-            this.panelMenuRecibo.Size = new System.Drawing.Size(250, 123);
+            this.panelMenuRecibo.Size = new System.Drawing.Size(250, 89);
             this.panelMenuRecibo.TabIndex = 1;
-            // 
-            // BtnPagar
-            // 
-            this.BtnPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.BtnPagar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnPagar.FlatAppearance.BorderSize = 0;
-            this.BtnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPagar.ForeColor = System.Drawing.Color.White;
-            this.BtnPagar.Location = new System.Drawing.Point(0, 80);
-            this.BtnPagar.Name = "BtnPagar";
-            this.BtnPagar.Size = new System.Drawing.Size(250, 40);
-            this.BtnPagar.TabIndex = 2;
-            this.BtnPagar.Text = "Pagar Reibo";
-            this.BtnPagar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPagar.UseVisualStyleBackColor = false;
             // 
             // btnListRecibos
             // 
@@ -115,6 +98,7 @@
             this.btnListRecibos.Text = "Recibos Genreados";
             this.btnListRecibos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnListRecibos.UseVisualStyleBackColor = false;
+            this.btnListRecibos.Click += new System.EventHandler(this.btnListRecibos_Click);
             // 
             // button1
             // 
@@ -138,7 +122,7 @@
             this.btnRecibo.FlatAppearance.BorderSize = 0;
             this.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecibo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRecibo.Location = new System.Drawing.Point(0, 364);
+            this.btnRecibo.Location = new System.Drawing.Point(0, 368);
             this.btnRecibo.Name = "btnRecibo";
             this.btnRecibo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRecibo.Size = new System.Drawing.Size(250, 45);
@@ -154,7 +138,7 @@
             this.panelAlumnoSubMenu.Controls.Add(this.btnTodosEstudiantes);
             this.panelAlumnoSubMenu.Controls.Add(this.btnAgregarEstudiantes);
             this.panelAlumnoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlumnoSubMenu.Location = new System.Drawing.Point(0, 275);
+            this.panelAlumnoSubMenu.Location = new System.Drawing.Point(0, 279);
             this.panelAlumnoSubMenu.Name = "panelAlumnoSubMenu";
             this.panelAlumnoSubMenu.Size = new System.Drawing.Size(250, 89);
             this.panelAlumnoSubMenu.TabIndex = 4;
@@ -197,7 +181,7 @@
             this.btnAlumnos.FlatAppearance.BorderSize = 0;
             this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlumnos.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAlumnos.Location = new System.Drawing.Point(0, 230);
+            this.btnAlumnos.Location = new System.Drawing.Point(0, 234);
             this.btnAlumnos.Name = "btnAlumnos";
             this.btnAlumnos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAlumnos.Size = new System.Drawing.Size(250, 45);
@@ -215,7 +199,7 @@
             this.panelEscuelaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEscuelaSubMenu.Location = new System.Drawing.Point(0, 145);
             this.panelEscuelaSubMenu.Name = "panelEscuelaSubMenu";
-            this.panelEscuelaSubMenu.Size = new System.Drawing.Size(250, 85);
+            this.panelEscuelaSubMenu.Size = new System.Drawing.Size(250, 89);
             this.panelEscuelaSubMenu.TabIndex = 2;
             // 
             // button3
@@ -283,11 +267,11 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(69, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(117, 100);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            
             // 
             // panelFormularioFijo
             // 
@@ -352,7 +336,6 @@
         private System.Windows.Forms.Panel panelMenuRecibo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnListRecibos;
-        private System.Windows.Forms.Button BtnPagar;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

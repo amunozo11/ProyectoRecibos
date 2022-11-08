@@ -76,9 +76,12 @@ namespace Logica
         }
 
 
-        public string Actualizar(Recibo tipo, Recibo tipoDos)
+        public string Actualizar(Recibo recibo, Recibo recibo2)
         {
-            throw new NotImplementedException();
+            Eliminar(recibo);
+            Guardar(recibo);
+            ActualizarLit();
+            return "ok";
         }
 
     }

@@ -62,6 +62,7 @@ namespace PresentacionGUI
         {
             this.Dispose();
         }
+        
         void CargarGrilla()
         {
             if (estudiantes.Mostrar() == null)
