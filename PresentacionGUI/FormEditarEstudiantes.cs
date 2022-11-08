@@ -37,9 +37,9 @@ namespace PresentacionGUI
         int Id;
         void Editar()
         {
-            //var EscuelaNombre = servicioEscuela.Mostrar();
-            //if (EscuelaNombre != null)
-            //{
+            var EscuelaNombre = servicioEscuela.Mostrar();
+            if (EscuelaNombre != null)
+            {
                 var estudiante = new Estudiante();
                 var estudianteOld = servicioEstudiante.Buscar(Id);
                 estudiante.Id = int.Parse(txtId.Text);
@@ -64,11 +64,11 @@ namespace PresentacionGUI
                 {
                     this.Close();
                 }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Necesita una escuela donde matricular al estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Necesita una escuela donde matricular al estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void FormEditarEstudiantes_Load(object sender, EventArgs e)
         {
