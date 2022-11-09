@@ -148,7 +148,6 @@
             this.GrillaSelect.Size = new System.Drawing.Size(180, 276);
             this.GrillaSelect.TabIndex = 51;
             this.GrillaSelect.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaSelect_CellClick);
-            this.GrillaSelect.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaSelect_CellContentClick);
             // 
             // txtObservacion
             // 

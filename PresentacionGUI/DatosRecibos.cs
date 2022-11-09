@@ -101,13 +101,6 @@ namespace PresentacionGUI
         }
         int indice;
         int columna;
-        private void GrillaSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            indice=e.RowIndex;
-            columna=e.ColumnIndex;
-            labelcolumn.Text = GrillaSelect.Rows[indice].Cells[0].Value.ToString();
-            labelindice.Text = indice.ToString();
-        }
         void GenerarRecibo()
         {
             PresentacionGUI.Recibo recibo = new Recibo();
@@ -159,6 +152,9 @@ namespace PresentacionGUI
         private void GrillaSelect_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             indice = e.RowIndex;
+            columna = e.ColumnIndex;
+            labelcolumn.Text = GrillaSelect.Rows[indice].Cells[0].Value.ToString();
+            labelindice.Text = indice.ToString();
         }
     }
 }
