@@ -152,8 +152,11 @@ namespace PresentacionGUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            
+            var r = MessageBox.Show("¿DESEA CERRAR SECCION?", "Cerrar sección", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            if(r == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
 
