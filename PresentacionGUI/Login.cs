@@ -44,12 +44,20 @@ namespace PresentacionGUI
             if (estado==true)
             {
                 FormularioMenu formularioMenu = new FormularioMenu();
-                formularioMenu.ShowDialog();
+                formularioMenu.Show();
+                formularioMenu.btnLogin.Text = txtUsuario.Text;
+                this.Close();
             }
             else
             {
                 MessageBox.Show("DATOS INCORRECTOS","INFO",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+        }
+
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Application.Exit();
         }
     }
 }

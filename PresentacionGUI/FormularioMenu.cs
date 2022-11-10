@@ -12,10 +12,12 @@ namespace PresentacionGUI
 {
     public partial class FormularioMenu : Form
     {
+        Login login = new Login();
         public FormularioMenu()
         {
             InitializeComponent();
             PersonalizacionDesing();
+            
         }
 
         private void PersonalizacionDesing()
@@ -146,6 +148,23 @@ namespace PresentacionGUI
         {
             FormulariosFijo(new RecibosGenerados());
             OcultarSubMenu();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+
+        private void FormularioMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

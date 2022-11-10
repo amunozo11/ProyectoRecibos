@@ -3,7 +3,7 @@
   <Class Name="Entidades.Escuela">
     <Position X="2.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAiCAAAAAAAIAAAAAAAAAAAgAAAEI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEiCAAAAAAAIAAAAAAAABAAgAAAEA=</HashCode>
       <FileName>Escuela.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -13,28 +13,21 @@
   <Class Name="Entidades.Estudiante">
     <Position X="4.5" Y="6.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAAAgAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEEAAAAQAQAAAAAAAAAAAQAAACAAAA=</HashCode>
       <FileName>Estudiante.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Entidades.GenerarRecibo">
-    <Position X="0.5" Y="7.75" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>GenerarRecibo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Persona">
     <Position X="4.5" Y="4.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>EAACAAAAAAAAAAAEgEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAEgEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Recibo">
     <Position X="0.5" Y="4.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAkAACAAgAAIAAgAAAAFAAABABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAkAACAAgAAMAAAAAAAEAAgBABAAAAAAAAAAAAA=</HashCode>
       <FileName>Recibo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
