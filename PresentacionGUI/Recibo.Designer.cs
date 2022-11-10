@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recibo));
             this.panelGenerañ = new System.Windows.Forms.Panel();
+            this.labelNitEsc = new System.Windows.Forms.Label();
+            this.labeLtelefono = new System.Windows.Forms.Label();
             this.labelCorreo = new System.Windows.Forms.Label();
             this.labelTel = new System.Windows.Forms.Label();
             this.labelDireccion = new System.Windows.Forms.Label();
@@ -58,6 +60,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.labelImpresion = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -74,14 +77,17 @@
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label44 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelPeriodo = new System.Windows.Forms.Label();
             this.Periodo = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -116,12 +122,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.labeLtelefono = new System.Windows.Forms.Label();
-            this.labelImpresion = new System.Windows.Forms.Label();
-            this.labelNitEsc = new System.Windows.Forms.Label();
+            this.labelBanco = new System.Windows.Forms.Label();
+            this.labelPer2 = new System.Windows.Forms.Label();
+            this.labelcedula2 = new System.Windows.Forms.Label();
+            this.labelNombre2 = new System.Windows.Forms.Label();
+            this.labelnit2 = new System.Windows.Forms.Label();
+            this.labelFechaLimite2 = new System.Windows.Forms.Label();
+            this.labelValor2 = new System.Windows.Forms.Label();
+            this.labelRefe2 = new System.Windows.Forms.Label();
+            this.labelfecha3 = new System.Windows.Forms.Label();
             this.panelGenerañ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
@@ -154,6 +163,11 @@
             // panelGenerañ
             // 
             this.panelGenerañ.BackColor = System.Drawing.Color.White;
+            this.panelGenerañ.Controls.Add(this.labelRefe2);
+            this.panelGenerañ.Controls.Add(this.labelnit2);
+            this.panelGenerañ.Controls.Add(this.labelNombre2);
+            this.panelGenerañ.Controls.Add(this.labelcedula2);
+            this.panelGenerañ.Controls.Add(this.labelPer2);
             this.panelGenerañ.Controls.Add(this.labelNitEsc);
             this.panelGenerañ.Controls.Add(this.labeLtelefono);
             this.panelGenerañ.Controls.Add(this.labelCorreo);
@@ -205,9 +219,32 @@
             this.panelGenerañ.Size = new System.Drawing.Size(726, 683);
             this.panelGenerañ.TabIndex = 0;
             // 
+            // labelNitEsc
+            // 
+            this.labelNitEsc.AutoSize = true;
+            this.labelNitEsc.BackColor = System.Drawing.Color.Transparent;
+            this.labelNitEsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNitEsc.Location = new System.Drawing.Point(228, 28);
+            this.labelNitEsc.Name = "labelNitEsc";
+            this.labelNitEsc.Size = new System.Drawing.Size(71, 15);
+            this.labelNitEsc.TabIndex = 52;
+            this.labelNitEsc.Text = "impresion";
+            // 
+            // labeLtelefono
+            // 
+            this.labeLtelefono.AutoSize = true;
+            this.labeLtelefono.BackColor = System.Drawing.Color.Transparent;
+            this.labeLtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeLtelefono.Location = new System.Drawing.Point(244, 55);
+            this.labeLtelefono.Name = "labeLtelefono";
+            this.labeLtelefono.Size = new System.Drawing.Size(23, 15);
+            this.labeLtelefono.TabIndex = 50;
+            this.labeLtelefono.Text = "tel";
+            // 
             // labelCorreo
             // 
             this.labelCorreo.AutoSize = true;
+            this.labelCorreo.BackColor = System.Drawing.Color.Transparent;
             this.labelCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCorreo.Location = new System.Drawing.Point(238, 69);
             this.labelCorreo.Name = "labelCorreo";
@@ -226,6 +263,7 @@
             // labelDireccion
             // 
             this.labelDireccion.AutoSize = true;
+            this.labelDireccion.BackColor = System.Drawing.Color.Transparent;
             this.labelDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDireccion.Location = new System.Drawing.Point(248, 42);
             this.labelDireccion.Name = "labelDireccion";
@@ -285,7 +323,7 @@
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel8.Controls.Add(this.panel16, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel17, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(395, 558);
@@ -297,11 +335,12 @@
             // 
             // panel16
             // 
+            this.panel16.Controls.Add(this.labelFechaLimite2);
             this.panel16.Controls.Add(this.label41);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(4, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(146, 32);
+            this.panel16.Size = new System.Drawing.Size(145, 32);
             this.panel16.TabIndex = 0;
             // 
             // label41
@@ -317,10 +356,11 @@
             // panel17
             // 
             this.panel17.Controls.Add(this.label42);
+            this.panel17.Controls.Add(this.labelValor2);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(157, 4);
+            this.panel17.Location = new System.Drawing.Point(156, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(141, 32);
+            this.panel17.Size = new System.Drawing.Size(142, 32);
             this.panel17.TabIndex = 1;
             // 
             // label42
@@ -379,6 +419,7 @@
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.labelBanco);
             this.panel15.Controls.Add(this.label7);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(4, 4);
@@ -492,6 +533,16 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(679, 13);
             this.panel14.TabIndex = 0;
+            // 
+            // labelImpresion
+            // 
+            this.labelImpresion.AutoSize = true;
+            this.labelImpresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImpresion.Location = new System.Drawing.Point(150, -4);
+            this.labelImpresion.Name = "labelImpresion";
+            this.labelImpresion.Size = new System.Drawing.Size(71, 15);
+            this.labelImpresion.TabIndex = 51;
+            this.labelImpresion.Text = "impresion";
             // 
             // label39
             // 
@@ -674,6 +725,16 @@
             this.panel3.Size = new System.Drawing.Size(165, 54);
             this.panel3.TabIndex = 0;
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(27, 27);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(78, 15);
+            this.label44.TabIndex = 47;
+            this.label44.Text = "PRINCIPAL";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -733,6 +794,16 @@
             this.panel11.Size = new System.Drawing.Size(165, 54);
             this.panel11.TabIndex = 3;
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(35, 27);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(52, 15);
+            this.label45.TabIndex = 48;
+            this.label45.Text = "CESAR";
+            // 
             // label35
             // 
             this.label35.AutoSize = true;
@@ -752,6 +823,16 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(165, 54);
             this.panel12.TabIndex = 4;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(34, 27);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(95, 15);
+            this.label46.TabIndex = 49;
+            this.label46.Text = "VALLEDUPAR";
             // 
             // label36
             // 
@@ -820,6 +901,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.labelfecha3);
             this.panel10.Controls.Add(this.label10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(457, 4);
@@ -854,7 +936,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.83024F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.16976F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
             this.tableLayoutPanel1.Controls.Add(this.panel8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 161);
@@ -871,7 +953,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(136, 53);
+            this.panel8.Size = new System.Drawing.Size(135, 53);
             this.panel8.TabIndex = 0;
             // 
             // labelId
@@ -900,9 +982,9 @@
             this.panel2.Controls.Add(this.labelNombre);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(147, 4);
+            this.panel2.Location = new System.Drawing.Point(146, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(298, 53);
+            this.panel2.Size = new System.Drawing.Size(297, 53);
             this.panel2.TabIndex = 1;
             // 
             // labeApellido
@@ -1054,6 +1136,7 @@
             // labelNameEscuela
             // 
             this.labelNameEscuela.AutoSize = true;
+            this.labelNameEscuela.BackColor = System.Drawing.Color.Transparent;
             this.labelNameEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNameEscuela.Location = new System.Drawing.Point(212, 7);
             this.labelNameEscuela.Name = "labelNameEscuela";
@@ -1099,65 +1182,98 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "VIGILADA MINEDUCACION";
             // 
-            // label44
+            // labelBanco
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(27, 27);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(78, 15);
-            this.label44.TabIndex = 47;
-            this.label44.Text = "PRINCIPAL";
+            this.labelBanco.AutoSize = true;
+            this.labelBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBanco.Location = new System.Drawing.Point(82, 0);
+            this.labelBanco.Name = "labelBanco";
+            this.labelBanco.Size = new System.Drawing.Size(71, 15);
+            this.labelBanco.TabIndex = 53;
+            this.labelBanco.Text = "impresion";
             // 
-            // label45
+            // labelPer2
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(35, 27);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(52, 15);
-            this.label45.TabIndex = 48;
-            this.label45.Text = "CESAR";
+            this.labelPer2.AutoSize = true;
+            this.labelPer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPer2.Location = new System.Drawing.Point(232, 587);
+            this.labelPer2.Name = "labelPer2";
+            this.labelPer2.Size = new System.Drawing.Size(56, 15);
+            this.labelPer2.TabIndex = 54;
+            this.labelPer2.Text = "periodo";
             // 
-            // label46
+            // labelcedula2
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(34, 27);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(95, 15);
-            this.label46.TabIndex = 49;
-            this.label46.Text = "VALLEDUPAR";
+            this.labelcedula2.AutoSize = true;
+            this.labelcedula2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcedula2.Location = new System.Drawing.Point(73, 589);
+            this.labelcedula2.Name = "labelcedula2";
+            this.labelcedula2.Size = new System.Drawing.Size(50, 15);
+            this.labelcedula2.TabIndex = 55;
+            this.labelcedula2.Text = "cedula";
             // 
-            // labeLtelefono
+            // labelNombre2
             // 
-            this.labeLtelefono.AutoSize = true;
-            this.labeLtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeLtelefono.Location = new System.Drawing.Point(244, 54);
-            this.labeLtelefono.Name = "labeLtelefono";
-            this.labeLtelefono.Size = new System.Drawing.Size(23, 15);
-            this.labeLtelefono.TabIndex = 50;
-            this.labeLtelefono.Text = "tel";
+            this.labelNombre2.AutoSize = true;
+            this.labelNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre2.Location = new System.Drawing.Point(165, 561);
+            this.labelNombre2.Name = "labelNombre2";
+            this.labelNombre2.Size = new System.Drawing.Size(65, 15);
+            this.labelNombre2.TabIndex = 56;
+            this.labelNombre2.Text = "Nombres";
             // 
-            // labelImpresion
+            // labelnit2
             // 
-            this.labelImpresion.AutoSize = true;
-            this.labelImpresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImpresion.Location = new System.Drawing.Point(150, -4);
-            this.labelImpresion.Name = "labelImpresion";
-            this.labelImpresion.Size = new System.Drawing.Size(71, 15);
-            this.labelImpresion.TabIndex = 51;
-            this.labelImpresion.Text = "impresion";
+            this.labelnit2.AutoSize = true;
+            this.labelnit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnit2.Location = new System.Drawing.Point(40, 535);
+            this.labelnit2.Name = "labelnit2";
+            this.labelnit2.Size = new System.Drawing.Size(23, 15);
+            this.labelnit2.TabIndex = 57;
+            this.labelnit2.Text = "nit";
             // 
-            // labelNitEsc
+            // labelFechaLimite2
             // 
-            this.labelNitEsc.AutoSize = true;
-            this.labelNitEsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNitEsc.Location = new System.Drawing.Point(228, 28);
-            this.labelNitEsc.Name = "labelNitEsc";
-            this.labelNitEsc.Size = new System.Drawing.Size(71, 15);
-            this.labelNitEsc.TabIndex = 52;
-            this.labelNitEsc.Text = "impresion";
+            this.labelFechaLimite2.AutoSize = true;
+            this.labelFechaLimite2.BackColor = System.Drawing.Color.Transparent;
+            this.labelFechaLimite2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFechaLimite2.Location = new System.Drawing.Point(51, 14);
+            this.labelFechaLimite2.Name = "labelFechaLimite2";
+            this.labelFechaLimite2.Size = new System.Drawing.Size(42, 15);
+            this.labelFechaLimite2.TabIndex = 58;
+            this.labelFechaLimite2.Text = "fecha";
+            // 
+            // labelValor2
+            // 
+            this.labelValor2.AutoSize = true;
+            this.labelValor2.BackColor = System.Drawing.Color.Transparent;
+            this.labelValor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValor2.Location = new System.Drawing.Point(27, 16);
+            this.labelValor2.Name = "labelValor2";
+            this.labelValor2.Size = new System.Drawing.Size(38, 15);
+            this.labelValor2.TabIndex = 59;
+            this.labelValor2.Text = "valor";
+            // 
+            // labelRefe2
+            // 
+            this.labelRefe2.AutoSize = true;
+            this.labelRefe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRefe2.Location = new System.Drawing.Point(607, 517);
+            this.labelRefe2.Name = "labelRefe2";
+            this.labelRefe2.Size = new System.Drawing.Size(84, 15);
+            this.labelRefe2.TabIndex = 58;
+            this.labelRefe2.Text = "nreferencoa";
+            // 
+            // labelfecha3
+            // 
+            this.labelfecha3.AutoSize = true;
+            this.labelfecha3.BackColor = System.Drawing.Color.Transparent;
+            this.labelfecha3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfecha3.Location = new System.Drawing.Point(61, 22);
+            this.labelfecha3.Name = "labelfecha3";
+            this.labelfecha3.Size = new System.Drawing.Size(71, 15);
+            this.labelfecha3.TabIndex = 52;
+            this.labelfecha3.Text = "impresion";
             // 
             // Recibo
             // 
@@ -1314,5 +1430,14 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label labelRefe2;
+        private System.Windows.Forms.Label labelnit2;
+        private System.Windows.Forms.Label labelNombre2;
+        private System.Windows.Forms.Label labelcedula2;
+        private System.Windows.Forms.Label labelPer2;
+        private System.Windows.Forms.Label labelFechaLimite2;
+        private System.Windows.Forms.Label labelValor2;
+        private System.Windows.Forms.Label labelBanco;
+        private System.Windows.Forms.Label labelfecha3;
     }
 }
