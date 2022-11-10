@@ -13,7 +13,6 @@ namespace Logica
     {
         readonly Datos.RepositorioLogin Rutalogin = new Datos.RepositorioLogin();
         List<Login> ListUsuarios;
-        readonly RepositorioEscuela repositorioEscuela = new RepositorioEscuela();
         public ServicioLogin()
         {
             ListUsuarios = Rutalogin.Leer();
@@ -78,16 +77,19 @@ namespace Logica
                 throw e.InnerException;
             }
         }
+        bool estado;
         public bool InicioSession(string usurario,string contraseña)
         {
-            bool estado=false;
-            foreach (var item in Rutalogin.Leer())
-            {
-                if (item.Usuario.Equals(usurario) && item.Contraseña.Equals(contraseña))
-                {
-                    return estado=true;
-                }
 
+            if (ListUsuarios!=null)
+            {
+                foreach (var item in ListUsuarios)
+                {
+                    if (item.Usuario.Equals(usurario) && item.Contraseña.Equals(contraseña))
+                    {
+                        return estado = true;
+                    }
+                }
             }
             return estado;
         }

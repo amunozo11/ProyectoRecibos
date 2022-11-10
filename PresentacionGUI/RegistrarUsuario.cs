@@ -33,12 +33,21 @@ namespace PresentacionGUI
         }
         void guardarUsuario()
         {
-            var usuario = new Entidades.Login();
-            usuario.Usuario=txtUsuario.Text;
-            usuario.Contraseña = txtContraseña.Text;
-            usuario.CorreoElectronico = txtCorreoL.Text;
-            var mensage=ServicioLogin.Guardar(usuario);
-            MessageBox.Show(mensage, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                var usuario = new Entidades.Login();
+                usuario.Usuario = txtUsuario.Text;
+                usuario.Contraseña = txtContraseña.Text;
+                usuario.CorreoElectronico = txtCorreoL.Text;
+                var mensage = ServicioLogin.Guardar(usuario);
+                MessageBox.Show(mensage, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }
