@@ -48,6 +48,7 @@
     <Compile Include="RetirarEstudiante.cs" />
     <Compile Include="ServicioEscuela.cs" />
     <Compile Include="ServicioEstudiante.cs" />
+    <Compile Include="ServicioLogin.cs" />
     <Compile Include="ServicioRecibo.cs" />
   </ItemGroup>
   <ItemGroup>

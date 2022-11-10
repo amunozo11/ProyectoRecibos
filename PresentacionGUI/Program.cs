@@ -16,7 +16,8 @@ namespace PresentacionGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioMenu());
+            //Application.Run(new FormularioMenu());
+            Application.Run(new Login());
         }
     }
 }

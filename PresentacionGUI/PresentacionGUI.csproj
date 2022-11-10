@@ -115,6 +115,12 @@
     <Compile Include="RecibosGenerados.Designer.cs">
       <DependentUpon>RecibosGenerados.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarUsuario.Designer.cs">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatosRecibos.resx">
       <DependentUpon>DatosRecibos.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecibosGenerados.resx">
       <DependentUpon>RecibosGenerados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarUsuario.resx">
+      <DependentUpon>RegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
