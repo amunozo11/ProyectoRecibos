@@ -80,7 +80,7 @@ namespace Logica
         bool estado;
         public bool InicioSession(string usurario,string contraseña)
         {
-
+            ActualizarList();
             if (ListUsuarios!=null)
             {
                 foreach (var item in ListUsuarios)
